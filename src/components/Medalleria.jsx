@@ -5,12 +5,12 @@ const SearchMedalleria = () => {
   const [users, setUsers] = useState([])
   const [search, setSearch] = useState('')
 
-  const folderUser = async () => {
-    const resp = await fetch(`${Constante.RUTA_API}/obtener_medalleria.php`)
-    const data = await resp.json()
-    console.log(data)
-    setUsers(data)
-  }
+  // const folderUser = async () => {
+  //   const resp = await fetch(`${Constante.RUTA_API}/obtener_medalleria.php`)
+  //   const data = await resp.json()
+  //   console.log(data)
+  //   setUsers(data)
+  // }
 
   const sercher = ({ target: { value } }) => {
     setSearch(value)
@@ -24,9 +24,9 @@ const SearchMedalleria = () => {
     return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase())
   })
 
-  useEffect(() => {
-    folderUser()
-  }, [])
+  // useEffect(() => {
+  //   folderUser()
+  // }, [])
 
   return (
     <div>
