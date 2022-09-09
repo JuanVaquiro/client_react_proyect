@@ -29,3 +29,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+@media (max-width:720px){
+  .responsi-card{
+    flex-direction: column;
+    align-items: center;
+  }
+}
