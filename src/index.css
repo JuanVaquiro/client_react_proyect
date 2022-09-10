@@ -62,6 +62,19 @@ table tr:nth-child(even) {
 }
 /* Fin-tabla-pages */
 
+.contenedor-pdf{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  z-index: 900;
+  width: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
+
 @media (max-width:720px){
   .responsi-card{
     flex-direction: column;
