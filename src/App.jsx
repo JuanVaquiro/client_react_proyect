@@ -7,8 +7,8 @@ import Karate2 from './components/logos/Karate2'
 function App() {
   return (
     <Fragment>
-      <main className="flex flex-col justify-center items-center  mb-6">
-        <h1 className="font-extrabold text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5">
+      <main className="flex flex-col justify-center items-center  mb-6 ">
+        <h1 className="font-extrabold text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text">
           Campeonato Ranking G1 Feria de las Flores 2022
         </h1>
         <div className="flex space-x-8 responsi-card">

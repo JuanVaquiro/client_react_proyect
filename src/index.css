@@ -9,6 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  /* background: linear-gradient(to bottom, #1c92d2, #f2fcfe) */
 }
 
 button {
@@ -29,6 +30,37 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+/* tabla-pages */
+.tabla{
+  width: 100%;
+  margin: 10px;
+  overflow-y: scroll;
+}
+
+.tabla td,
+.tabla th{
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.tabla th{
+  background-color:rgb(15, 15, 49);
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left; 
+}
+
+table tr:nth-child(even) {
+  background-color:rgba(106, 126, 240, 0.411);
+}
+
+.tabla tr:hover{
+  background-color: rgba(92, 116, 253, 0.904);
+  cursor: pointer;
+}
+/* Fin-tabla-pages */
 
 @media (max-width:720px){
   .responsi-card{
