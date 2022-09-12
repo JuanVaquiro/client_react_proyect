@@ -1,6 +1,12 @@
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer'
 
 const styles = StyleSheet.create({
+    title:{
+      fonySize: '12px',
+      fontWeight: 900,
+      textAlign: 'center',
+      marginTop: '10px'
+    },
     tabla:{
       display: 'tabla',
       width: '100%',
@@ -67,6 +73,9 @@ const MedalleriaPDF = ({ users }) => {
   return (
     <Document>
       <Page size="A4">
+          <View style={styles.container}>
+            <Text style={styles.title}>Tabla Medalleria</Text>
+          </View>
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>
             <View style={styles.tablaColumna2}>

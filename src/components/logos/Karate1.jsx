@@ -3,7 +3,7 @@ import React from "react";
 const Karate1 = () => {
   return (
     <svg
-        className="w-4/12 p-5"
+        className="w-3/12 p-5"
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1146.000000 1280.000000"
