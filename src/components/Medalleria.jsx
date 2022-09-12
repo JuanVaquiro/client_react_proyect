@@ -64,31 +64,39 @@ const SearchMedalleria = () => {
           </tr>
         </thead>
         <tbody>
-          {
-            resultSearch.map((data) => (
+          {resultSearch.map((data) => (
             <tr key={data.id}>
               <td>{data.id}</td>
               <td>{data.name}</td>
               <td>{data.username}</td>
               <td>{data.email}</td>
             </tr>
-            ))
-          }
+          ))}
         </tbody>
       </table>
-      {
-        verPDF ? (
-          <div className="contenedor-pdf">
-            <button className="btn btn-danger" onClick={() => setVerPDF(false)}>
-            {" "}
-            Cerrar PDF
-            </button>
-            <PDFViewer style={{ width: "100%", height: "90vh" }}>
-              <MedalleriaPDF users={users} />
-            </PDFViewer>
+      {verPDF ? (
+        <div
+          className="fancybox-container fancybox-is-open"
+          role="dialog"
+          tabIndex="-1"
+        >
+          <div className="fancybox-bg"></div>
+          <div className="flex flex-col items-center justify-center mt-11">
+            <div className="fancybox-iframe">
+              <button
+                className="btn btn-danger margin-box"
+                onClick={() => setVerPDF(false)}
+              >
+                {" "}
+                Cerrar PDF
+              </button>
+              <PDFViewer style={{ width: "90%", height: "90vh" }}>
+                <MedalleriaPDF users={users} />
+              </PDFViewer>
+            </div>
           </div>
-        ) : null
-      }
+        </div>
+      ) : null}
     </div>
   );
 }
