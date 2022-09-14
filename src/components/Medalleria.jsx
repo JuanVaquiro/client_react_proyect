@@ -1,11 +1,11 @@
 import { Fragment, useEffect, useState } from 'react'
-import Constante from '../constante'
 import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
 import MedalleriaPDF from '../renderPDF/medalleriaPDF'
 import TablaPlata from './Plata'
 import TablaOro from './Oro'
 import TablaBronce1 from './Bronce'
 import TablaBronce2 from './Bronce2'
+import ObtenerTablaOro from './ObtenerTablaOro'
 
 const Medalleria = () => {
   const [verPDF, setVerPDF] = useState(false)
@@ -47,6 +47,7 @@ const Medalleria = () => {
         <button class="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
         <button class="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
       </div>
+      
       {
         verOro ? (
           <TablaOro />

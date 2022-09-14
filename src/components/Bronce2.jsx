@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
 import Constante from '../constante'
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import Bronce2PDF from '../renderPDF/Bronce2PDF'
 
 const TablaBronce2 = () => {
   const [bronce, setBronce] = useState([])
@@ -26,8 +28,15 @@ const TablaBronce2 = () => {
 
   return (
     <Fragment>
+    <PDFDownloadLink
+    document={<Bronce2PDF bronce={bronce}/>}
+    fileName="Bronce-2.pdf"
+    >
+    <button className="btn btn-primary">Descargar PDF</button>
+  </PDFDownloadLink>
       <div className="flex flex-col items-center justify-center">
       <input
+      className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
       value={search2}
       onChange={sercher2}
       type="text"
@@ -36,6 +45,7 @@ const TablaBronce2 = () => {
         <table className="tabla">
           <thead>
             <tr>
+              <th>COD</th>
               <th>PIRAMIDE</th>
               <th>BRONCE 2</th>
               <th>DELEGACION BRONCE 2</th>
@@ -43,7 +53,8 @@ const TablaBronce2 = () => {
           </thead>
           <tbody>
             {resultSearch.map((data) => (
-              <tr key={''}>
+              <tr key={data.COD}>
+                <td>{data.COD}</td>
                 <td>{data.PIRAMIDE}</td>
                 <td>{data.Bronce2}</td>
                 <td>{data.delacion_bronce2}</td>

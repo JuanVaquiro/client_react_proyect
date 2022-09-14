@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
       borderLeftWidthL: 0,
       borderTopWidth: 0,
       backgroundColor: 'rgb(15, 15, 49)',
-      textAlign: 'left'
     },
     tablaColumna2: {
       width: '5%',
@@ -40,16 +39,17 @@ const styles = StyleSheet.create({
       textAlign: 'left'
     },
     tablaCeldaHeader:{
-      margin: 5,
-      fonySize: 10,
-      fontWeight: 700,
+      textAlign: 'center',
+      margin: 2,
+      fonySize: 8,
+      fontWeight: 'bold',
       color: 'white',
-      paddingTop: '2px',
-      paddingBottom: '2px',
+      paddingTop: '1px',
+      paddingBottom: '1px',
     },
     tablaCeldaContents:{
-      margin: 5,
-      fontSize: 12
+      margin: 4,
+      fontSize: '10px'
     },
     anchoColumna:{
       width: '28%',
@@ -69,42 +69,48 @@ const styles = StyleSheet.create({
     }
 });
 
-const MedalleriaPDF = ({ users }) => {
+const MedalleriaPDF = ({ oro }) => {
   return (
     <Document>
       <Page size="A4">
           <View style={styles.container}>
-            <Text style={styles.title}>Tabla Medalleria</Text>
+            <Text style={styles.title}>Tabla Medalleria ORO</Text>
           </View>
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>
             <View style={styles.tablaColumna2}>
-              <Text style={styles.tablaCeldaHeader}>id</Text>
+              <Text style={styles.tablaCeldaHeader}>COD</Text>
+            </View>
+            <View style={styles.tablaColumna2}>
+              <Text style={styles.tablaCeldaHeader}>#DEP</Text>
             </View>
             <View style={styles.tablaColumna1}>
-              <Text style={styles.tablaCeldaHeader}>name</Text>
+              <Text style={styles.tablaCeldaHeader}>PIRAMIDE</Text>
             </View>
             <View style={styles.tablaColumna1}>
-              <Text style={styles.tablaCeldaHeader}>username</Text>
+              <Text style={styles.tablaCeldaHeader}>ORO</Text>
             </View>
             <View style={styles.tablaColumna1}>
-              <Text style={styles.tablaCeldaHeader}>email</Text>
-            </View>
+            <Text style={styles.tablaCeldaHeader}>DELEGACION ORO</Text>
+          </View>
           </View>
 
-          {users.map((data) => (
-            <View style={styles.tablaFila} key={data.id}>
+          {oro.map((data) => (
+            <View style={styles.tablaFila} key={data.COD}>
               <View style={styles.anchoColumnaNumber}>
-                <Text style={styles.tablaCeldaContents}>{data.id}</Text>
+                <Text style={styles.tablaCeldaContents}>{data.COD}</Text>
+              </View>
+              <View style={styles.anchoColumnaNumber}>
+                <Text style={styles.tablaCeldaContents}>{data.CANT_DEPORTISTAS}</Text>
               </View>
               <View style={styles.anchoColumna}>
-                <Text style={styles.tablaCeldaContents}>{data.name}</Text>
+                <Text style={styles.tablaCeldaContents}>{data.PIRAMIDE}</Text>
               </View>
               <View style={styles.anchoColumna}>
-                <Text style={styles.tablaCeldaContents}>{data.username}</Text>
+                <Text style={styles.tablaCeldaContents}>{data.Oro}</Text>
               </View>
               <View style={styles.anchoColumna}>
-                <Text style={styles.tablaCeldaContents}>{data.email}</Text>
+                <Text style={styles.tablaCeldaContents}>{data.delacion_oro}</Text>
               </View>
             </View>
           ))}
