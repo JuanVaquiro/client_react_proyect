@@ -40,15 +40,15 @@ button:focus-visible {
 
 .tabla td,
 .tabla th{
-  padding: 8px;
+  padding: 4px;
   border: 1px solid #ddd;
 }
 
 .tabla th{
   background-color:rgb(15, 15, 49);
   color: white;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   text-align: left; 
 }
 
