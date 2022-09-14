@@ -38,16 +38,6 @@ const SearchMedalleria = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <PDFDownloadLink
-        document={<MedalleriaPDF users={users} />}
-        fileName="Medalleria.pdf"
-      >
-        <button className="btn btn-primary">Descargar PDF</button>
-      </PDFDownloadLink>
-
-      <button className="btn btn-primary" onClick={() => mostrarPDF()}>
-        Ver Documento PDF
-      </button>
       <input
         value={search}
         onChange={sercher}
@@ -74,6 +64,20 @@ const SearchMedalleria = () => {
           ))}
         </tbody>
       </table>
+
+      <div className='flex gap-2'>
+        <PDFDownloadLink
+          document={<MedalleriaPDF users={users} />}
+          fileName="Medalleria.pdf"
+        >
+          <button className="btn btn-primary">Descargar PDF</button>
+        </PDFDownloadLink>
+
+        <button className="btn btn-primary" onClick={() => mostrarPDF()}>
+          Ver Documento PDF
+        </button>
+      </div>
+
       {verPDF ? (
         <div
           className="fancybox-container fancybox-is-open"
