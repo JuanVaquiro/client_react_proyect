@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const MedalleriaPDF = ({ oro }) => {
+const OroPDF = ({ oro }) => {
   return (
     <Document>
       <Page size="A4">
@@ -120,4 +120,4 @@ const MedalleriaPDF = ({ oro }) => {
   );
 }
 
-export default MedalleriaPDF;
+export default OroPDF;

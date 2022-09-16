@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from './App'
-import SearchMedalleria from './components/medalleria';
+import Medalleria from './modules/medalleria/Medalleria';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
        <Route path='/' element={<App />} />
-       <Route path="Medalleria" element={<SearchMedalleria />} />
+       <Route path="Medalleria" element={<Medalleria />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
-import Constante from '../constante'
+import Constante from '../../constante'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import BroncePDF from '../renderPDF/BroncePDF'
+import BroncePDF from '../../renderPDF/BroncePDF'
 
 const TablaBronce1 = () => {
   const [bronce, setBronce] = useState([])
@@ -15,7 +15,6 @@ const TablaBronce1 = () => {
 
   const sercher2 = ({ target: { value } }) => {
     setSearch2(value)
-    console.log(value)
   }
 
   const resultSearch = bronce.filter((elem) => {

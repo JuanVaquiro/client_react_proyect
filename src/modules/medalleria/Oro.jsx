@@ -1,8 +1,7 @@
-import { Fragment, useEffect, useState } from "react";
-import Constante from "../constante";
-import ObtenerTablaOro from "./ObtenerTablaOro";
+import { Fragment, useEffect, useState } from 'react'
+import Constante from '../../constante'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import MedalleriaPDF from "../renderPDF/medalleriaPDF";
+import MedalleriaPDF from '../../renderPDF/OroPDF'
 
 const TablaOro = () => {
   const [oro, setOro] = useState([]);
@@ -16,7 +15,6 @@ const TablaOro = () => {
 
   const sercher = ({ target: { value } }) => {
     setSearch(value);
-    console.log(value);
   };
 
   const resultSearch = oro.filter((elem) => {

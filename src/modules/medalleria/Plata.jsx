@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
-import Constante from '../constante'
+import Constante from '../../constante'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import PlataPDF from '../renderPDF/plataPDF'
+import PlataPDF from '../../renderPDF/PlataPDF'
 
 const TablaPlata = () => {
   const [plata, setPlata] = useState([])
@@ -16,7 +16,6 @@ const TablaPlata = () => {
 
   const sercher2 = ({ target: { value } }) => {
     setSearch2(value)
-    console.log(value)
   }
 
   const resultSearch = plata.filter((elem) => {
