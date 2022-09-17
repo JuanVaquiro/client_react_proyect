@@ -10,7 +10,6 @@ const TablaPlata = () => {
   const Plata = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Plata.php`)
     const dataPlata = await resp.json()
-    // console.log(dataPlata)
     setPlata(dataPlata)
   }
 
@@ -28,12 +27,12 @@ const TablaPlata = () => {
 
   return (
     <Fragment>
-    <PDFDownloadLink
+    {/* <PDFDownloadLink
         document={<PlataPDF plata={plata}/>}
         fileName="Plata.pdf"
         >
         <button className="btn btn-primary">Descargar PDF</button>
-      </PDFDownloadLink>
+  </PDFDownloadLink> */}
       <div className="flex flex-col items-center justify-center">
       <input
       className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"

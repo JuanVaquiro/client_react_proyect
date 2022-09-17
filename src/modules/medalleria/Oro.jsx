@@ -7,37 +7,37 @@ const TablaOro = () => {
   const [oro, setOro] = useState([]);
   const [search, setSearch] = useState("");
 
-  const dataORO = async () => {
+  const Oro = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Oro.php`);
     const data = await resp.json();
     setOro(data);
   };
 
-  const sercher = ({ target: { value } }) => {
+  const buscador = ({ target: { value } }) => {
     setSearch(value);
   };
 
-  const resultSearch = oro.filter((elem) => {
+  const BuscarResultado = oro.filter((elem) => {
     return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase());
   });
 
   useEffect(() => {
-    dataORO();
+    Oro();
   }, []);
 
   return (
     <Fragment>
-      <PDFDownloadLink
+      {/* <PDFDownloadLink
         document={<MedalleriaPDF oro={oro} />}
         fileName="Medalleria.pdf"
         >
         <button className="btn btn-primary">Descargar PDF</button>
-      </PDFDownloadLink>
+        </PDFDownloadLink> */}
       <div className="flex flex-col items-center justify-center">
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
           value={search}
-          onChange={sercher}
+          onChange={buscador}
           type="text"
           placeholder="Buscador"
         />
@@ -45,17 +45,15 @@ const TablaOro = () => {
           <thead>
             <tr>
               <th>COD</th>
-              <th>#DEP</th>
               <th>PIRAMIDE</th>
               <th>ORO</th>
               <th>DELEGACION ORO</th>
             </tr>
           </thead>
           <tbody>
-            {resultSearch.map((data) => (
+            {BuscarResultado.map((data) => (
               <tr key={data.COD}>
                 <td>{data.COD}</td>
-                <td>{data.CANT_DEPORTISTAS}</td>
                 <td>{data.PIRAMIDE}</td>
                 <td>{data.Oro}</td>
                 <td>{data.delacion_oro}</td>
