@@ -5,7 +5,7 @@ import TablaBronce1 from './Bronce'
 import TablaBronce2 from './Bronce2'
 import TodasLasMedallas from './AllMedalls'
 
-const Medalleria = () => {
+const Medalls = () => {
   const [verTodas, setVerTodas] = useState(true)
   const [verOro, setVerOro] = useState(false)
   const [verPlata, setVerPlata] = useState(false)
@@ -93,4 +93,4 @@ const Medalleria = () => {
   );
 }
 
-export default Medalleria
+export default Medalls

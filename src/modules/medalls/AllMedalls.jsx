@@ -7,6 +7,7 @@ const AllMedalls = () => {
     const [bronze, setBronze] = useState([])
     const [bronze2, setBronze2] = useState([])
     const [medalls, setMedalls]= useState([])
+    const [search, setSearch] = useState("");
 
   const Gold = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Oro.php`);
@@ -64,8 +65,23 @@ const AllMedalls = () => {
     }
   })
 
+  const Search = ({ target: { value } }) => {
+    setSearch(value);
+  };
+
+  const SearchResult = getAllMedalls.filter((elem) => {
+    return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase());
+  });
+
   return (
     <Fragment>
+    <input
+    className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
+    value={search}
+    onChange={Search}
+    type="text"
+    placeholder="Buscador"
+  />
     <table className="tabla">
           <thead>
             <tr>
@@ -84,7 +100,7 @@ const AllMedalls = () => {
           </thead>
           <tbody>
         {
-            getAllMedalls.map((params) => (
+          SearchResult.map((params) => (
             <tr key={params.COD}>
               <td>{params.COD}</td>
               <td>{params.CANT_DEPORTISTAS}</td>
