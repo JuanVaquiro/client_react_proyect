@@ -3,7 +3,7 @@ import TablaPlata from './Plata'
 import TablaOro from './Oro'
 import TablaBronce1 from './Bronce'
 import TablaBronce2 from './Bronce2'
-import TodasLasMedallas from './TodasLasMedallas'
+import TodasLasMedallas from './AllMedalls'
 
 const Medalleria = () => {
   const [verTodas, setVerTodas] = useState(true)

@@ -1,7 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
 import Constante from '../../constante'
-import { PDFDownloadLink } from '@react-pdf/renderer'
-import MedalleriaPDF from '../../renderPDF/OroPDF'
 
 const TablaOro = () => {
   const [oro, setOro] = useState([]);
@@ -27,12 +25,6 @@ const TablaOro = () => {
 
   return (
     <Fragment>
-      {/* <PDFDownloadLink
-        document={<MedalleriaPDF oro={oro} />}
-        fileName="Medalleria.pdf"
-        >
-        <button className="btn btn-primary">Descargar PDF</button>
-        </PDFDownloadLink> */}
       <div className="flex flex-col items-center justify-center">
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"

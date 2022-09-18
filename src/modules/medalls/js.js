@@ -19,7 +19,13 @@ const array3 = [
     {cod: 10, delacion_bronce1: 'MAGDALENA'},
     {cod: 11, delacion_bronce1: 'BOYACA'}
 ]
-// como crear este ARRAY
+
+const newArray1 = array1.map((item) => {
+    const { delacion_plata } = array2.find( item2 => item2.cod === item.COD)
+    const { delacion_bronce1 } = array3.find( item2 => item2.cod === item.COD)
+    return{ ...item, delacion_plata, delacion_bronce1}
+})
+
 const newArray = [
     {COD: 7, delacion_oro: 'CASANARE', delacion_plata: 'CORDOBA', delacion_bronce1: 'SISTEMA'},
     {COD: 8, delacion_oro: 'BOYACA', delacion_plata: 'SANTANDER', delacion_bronce1: 'SISTEMA FENIX'},
@@ -27,10 +33,4 @@ const newArray = [
     {COD: 10, delacion_oro: 'CASANARE', delacion_plata: 'MAGDALENA', delacion_bronce1: 'MAGDALENA'},
     {COD: 11, delacion_oro: 'CUNDINAMARCA', delacion_plata: 'CASANARE', delacion_bronce1: 'BOYACA'}
 ]
-
-const newArray1 = array1.map((item) => {
-    const { delacion_plata } = array2.find( item2 => item2.cod === item.COD)
-    const { delacion_bronce1 } = array3.find( item2 => item2.cod === item.COD)
-    return{ ...item, delacion_plata, delacion_bronce1}
-})
 

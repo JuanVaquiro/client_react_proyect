@@ -1,38 +1,30 @@
 import { Fragment, useEffect, useState } from 'react'
 import Constante from '../../constante'
-import { PDFDownloadLink } from '@react-pdf/renderer'
-import PlataPDF from '../../renderPDF/PlataPDF'
 
-const TablaPlata = () => {
-  const [plata, setPlata] = useState([])
+const TablaBronce1 = () => {
+  const [bronce, setBronce] = useState([])
   const [search2, setSearch2] = useState('')
 
-  const Plata = async () => {
-    const resp = await fetch(`${Constante.RUTA_API}/obtener_Plata.php`)
-    const dataPlata = await resp.json()
-    setPlata(dataPlata)
+  const Bronce = async () => {
+    const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce1.php`)
+    const dataBronce = await resp.json()
+    setBronce(dataBronce)
   }
 
   const sercher2 = ({ target: { value } }) => {
     setSearch2(value)
   }
 
-  const resultSearch = plata.filter((elem) => {
+  const resultSearch = bronce.filter((elem) => {
     return JSON.stringify(elem).toLowerCase().includes(search2.toLowerCase())
   })
   
   useEffect(() => {
-    Plata()
+    Bronce()
   }, [])
 
   return (
     <Fragment>
-    {/* <PDFDownloadLink
-        document={<PlataPDF plata={plata}/>}
-        fileName="Plata.pdf"
-        >
-        <button className="btn btn-primary">Descargar PDF</button>
-  </PDFDownloadLink> */}
       <div className="flex flex-col items-center justify-center">
       <input
       className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
@@ -44,19 +36,19 @@ const TablaPlata = () => {
         <table className="tabla">
           <thead>
             <tr>
-              <th>COD</th>
               <th>PIRAMIDE</th>
-              <th>PLATA</th>
-              <th>DELEGACION PLATA</th>
+              <th>PIRAMIDE</th>
+              <th>BRONCE 1</th>
+              <th>DELEGACION BRONCE 1</th>
             </tr>
           </thead>
           <tbody>
             {resultSearch.map((data) => (
-              <tr key={data.cod}>
-                <td>{data.cod}</td>
+              <tr key={data.COD}>
+                <td>{data.COD}</td>
                 <td>{data.PIRAMIDE}</td>
-                <td>{data.Plata}</td>
-                <td>{data.delacion_plata}</td>
+                <td>{data.Bronce1}</td>
+                <td>{data.delacion_bronce1}</td>
               </tr>
             ))}
           </tbody>
@@ -66,4 +58,4 @@ const TablaPlata = () => {
   );
 }
 
-export default TablaPlata
+export default TablaBronce1
