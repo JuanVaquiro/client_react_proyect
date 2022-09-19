@@ -3,8 +3,8 @@ import TablaPlata from './Plata'
 import TablaOro from './Oro'
 import TablaBronce1 from './Bronce'
 import TablaBronce2 from './Bronce2'
-import TodasLasMedallas from './AllMedalls'
 import AllMedallsPDF from '../../renderPDF/AllMedallsPDF'
+import AllMedalls from './AllMedalls'
 
 const Medalls = () => {
   const [verTodas, setVerTodas] = useState(true)
@@ -12,6 +12,7 @@ const Medalls = () => {
   const [verPlata, setVerPlata] = useState(false)
   const [verBronce1, setVerBronce1] = useState(false)
   const [verBronce2, setVerBronce2] = useState(false)
+
 
   const MostrarOro = () => { 
     setVerOro(true)
@@ -91,7 +92,7 @@ const Medalls = () => {
       }
       {
         verTodas ? (
-          <TodasLasMedallas />
+            <AllMedalls />
         ) : null
       }
       </div>
