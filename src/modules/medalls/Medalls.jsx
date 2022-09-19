@@ -4,6 +4,7 @@ import TablaOro from './Oro'
 import TablaBronce1 from './Bronce'
 import TablaBronce2 from './Bronce2'
 import TodasLasMedallas from './AllMedalls'
+import AllMedallsPDF from '../../renderPDF/AllMedallsPDF'
 
 const Medalls = () => {
   const [verTodas, setVerTodas] = useState(true)
@@ -59,7 +60,12 @@ const Medalls = () => {
         <button class="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
         <button class="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
         <button class="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
-        <button className="btn btn-primary">Descargar PDF</button>
+       {/*  <PDFDownloadLink
+          document={<AllMedallsPDF />}
+          fileName="Medalleria.pdf"
+        >
+          <button className="btn btn-primary">Descargar PDF</button>
+        </PDFDownloadLink> */}
       </div>
       
       {

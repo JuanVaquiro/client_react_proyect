@@ -41,6 +41,7 @@ button:focus-visible {
 .tabla th{
   padding: 4px;
   border: 1px solid #ddd;
+  font-size: 14px;
 }
 
 .tabla th{
@@ -50,10 +51,10 @@ button:focus-visible {
   padding-bottom: 8px;
   text-align: left; 
 }
-
-table tr:nth-child(even) {
+/* 
+.tabla tr:nth-child(even) {
   background-color:rgba(106, 126, 240, 0.411);
-}
+} */
 
 .tabla tr:hover{
   background-color: rgba(92, 116, 253, 0.904);

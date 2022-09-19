@@ -1,5 +1,7 @@
 import { Fragment, useEffect, useState } from 'react'
+import { PDFDownloadLink } from '@react-pdf/renderer'
 import Constante from '../../constante';
+import AllMedallsPDF from '../../renderPDF/AllMedallsPDF';
 
 const AllMedalls = () => {
     const [gold, setGold] = useState([])
@@ -75,6 +77,12 @@ const AllMedalls = () => {
 
   return (
     <Fragment>
+    <PDFDownloadLink
+    document={<AllMedallsPDF medalls={getAllMedalls} />}
+    fileName="Medalleria.pdf"
+  >
+    <button className="btn btn-primary">Descargar PDF</button>
+  </PDFDownloadLink>
     <input
     className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
     value={search}
@@ -105,13 +113,13 @@ const AllMedalls = () => {
               <td>{params.COD}</td>
               <td>{params.CANT_DEPORTISTAS}</td>
               <td>{params.PIRAMIDE}</td>
-              <td>{params.Oro}</td>
+              <td className='bg-yellow-300'>{params.Oro}</td>
               <td>{params.delacion_oro}</td>
-              <td>{params.silver}</td>
+              <td className='bg-slate-300'>{params.silver}</td>
               <td>{params.delation_silver}</td>
-              <td>{params.bronze}</td>
+              <td className='bg-orange-300'>{params.bronze}</td>
               <td>{params.delation_bronze}</td>
-              <td>{params.bronze2}</td>
+              <td className='bg-orange-300'>{params.bronze2}</td>
               <td>{params.delation_bronze2}</td>
             </tr>
           ))
