@@ -77,13 +77,13 @@ const AllMedallsPDF = ({ medalls }) => {
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>
             <View style={styles.tablaColumna2}>
-              <Text style={styles.tablaCeldaHeader}>COD</Text>
+              <Text style={styles.tablaCeldaHeader}>#</Text>
             </View>
             <View style={styles.tablaColumna1}>
               <Text style={styles.tablaCeldaHeader}>PIRAMIDE</Text>
             </View>
             <View style={styles.tablaColumna1}>
-              <Text style={styles.tablaCeldaHeader}>Oro</Text>
+              <Text style={styles.tablaCeldaHeader}>ORO</Text>
             </View>
             <View style={styles.tablaColumna1}>
               <Text style={styles.tablaCeldaHeader}>DELEGACION ORO</Text>
@@ -120,7 +120,7 @@ const AllMedallsPDF = ({ medalls }) => {
       <View style={styles.tabla}>
         <View style={styles.tablaFila}>
           <View style={styles.tablaColumna2}>
-            <Text style={styles.tablaCeldaHeader}>COD</Text>
+            <Text style={styles.tablaCeldaHeader}>#</Text>
           </View>
           <View style={styles.tablaColumna1}>
             <Text style={styles.tablaCeldaHeader}>PIRAMIDE</Text>
@@ -129,7 +129,7 @@ const AllMedallsPDF = ({ medalls }) => {
             <Text style={styles.tablaCeldaHeader}>PLATA</Text>
           </View>
           <View style={styles.tablaColumna1}>
-            <Text style={styles.tablaCeldaHeader}>DELEGACION PLATA</Text>
+            <Text style={styles.tablaCeldaHeader}>DELEGACION   PLATA</Text>
           </View>
         </View>
 
@@ -163,7 +163,7 @@ const AllMedallsPDF = ({ medalls }) => {
     <View style={styles.tabla}>
       <View style={styles.tablaFila}>
         <View style={styles.tablaColumna2}>
-          <Text style={styles.tablaCeldaHeader}>COD</Text>
+          <Text style={styles.tablaCeldaHeader}>#</Text>
         </View>
         <View style={styles.tablaColumna1}>
           <Text style={styles.tablaCeldaHeader}>PIRAMIDE</Text>
@@ -192,6 +192,49 @@ const AllMedallsPDF = ({ medalls }) => {
           <View style={styles.anchoColumna}>
             <Text style={styles.tablaCeldaContents}>
               {data.delation_bronze}
+            </Text>
+          </View>
+        </View>
+      ))}
+    </View>
+  </Page>
+
+  <Page size="A4">
+    <View style={styles.container}>
+      <Text style={styles.title}>Tabla Medalleria BRONCE</Text>
+    </View>
+    <View style={styles.tabla}>
+      <View style={styles.tablaFila}>
+        <View style={styles.tablaColumna2}>
+          <Text style={styles.tablaCeldaHeader}>#</Text>
+        </View>
+        <View style={styles.tablaColumna1}>
+          <Text style={styles.tablaCeldaHeader}>PIRAMIDE</Text>
+        </View>
+        <View style={styles.tablaColumna1}>
+          <Text style={styles.tablaCeldaHeader}>BRONCE 2</Text>
+        </View>
+        <View style={styles.tablaColumna1}>
+          <Text style={styles.tablaCeldaHeader}>DELEGACION BRONCE 2</Text>
+        </View>
+      </View>
+
+      {medalls.map((data) => (
+        <View style={styles.tablaFila} key={data.COD}>
+          <View style={styles.anchoColumnaNumber}>
+            <Text style={styles.tablaCeldaContents}>{data.COD}</Text>
+          </View>
+          <View style={styles.anchoColumna}>
+            <Text style={styles.tablaCeldaContents}>
+              {data.PIRAMIDE}
+            </Text>
+          </View>
+          <View style={styles.anchoColumna}>
+            <Text style={styles.tablaCeldaContents}>{data.bronze2}</Text>
+          </View>
+          <View style={styles.anchoColumna}>
+            <Text style={styles.tablaCeldaContents}>
+              {data.delation_bronze2}
             </Text>
           </View>
         </View>

@@ -26,15 +26,15 @@ const TableGold = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <input
-        className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
+        className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3 mb-3"
         value={search}
         onChange={Search}
         type="text"
         placeholder="Buscador"
       />
-      <table className="tabla">
+      <table className="table table-hover">
         <thead>
-          <tr>
+          <tr className='table-dark text-white'>
             <th>COD</th>
             <th>PIRAMIDE</th>
             <th>ORO</th>

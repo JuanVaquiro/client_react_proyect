@@ -134,3 +134,9 @@ button:focus-visible {
     align-items: center;
   }
 }
+
+@media (max-width:640px){
+  .responsi-container{
+    width: 1050px;
+  }
+}

@@ -51,7 +51,7 @@ const Medalls = () => {
 
   return (
     <Fragment>
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center responsi-container'>
       <div className="btn-group  mt-3" 
         role="group" aria-label="Basic outlined example">
         <button class="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>

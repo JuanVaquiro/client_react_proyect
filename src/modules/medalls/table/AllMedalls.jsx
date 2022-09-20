@@ -95,7 +95,7 @@ const AllMedalls = () => {
           document={<AllMedallsPDF medalls={getAllMedalls} />}
           fileName="Medalleria.pdf"
         >
-          <button className="btn btn-primary">Descargar PDF</button>
+          <button className="btn btn-primary mt-3">Descargar PDF</button>
         </PDFDownloadLink>
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
@@ -106,7 +106,7 @@ const AllMedalls = () => {
         />
         <table className="tabla">
           <thead>
-            <tr>
+            <tr className=''>
               <th>COD</th>
               <th>#DEP</th>
               <th>PIRAMIDE</th>
