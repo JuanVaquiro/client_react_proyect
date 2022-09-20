@@ -107,17 +107,17 @@ const AllMedalls = () => {
         <table className="tabla">
           <thead>
             <tr className=''>
-              <th>COD</th>
-              <th>#DEP</th>
+              <th>*N</th>
+              <th>#DP</th>
               <th>PIRAMIDE</th>
               <th>ORO</th>
-              <th>DELEGACION ORO</th>
+              <th>DEL.ORO</th>
               <th>PLATA</th>
-              <th>DELEGACION PLATA</th>
+              <th>DEL.PLATA</th>
               <th>Bronce 1</th>
-              <th>DELEGACION BRONCE 1</th>
+              <th>DEL.BRONCE 1</th>
               <th>Bronce 2</th>
-              <th>DELEGACION BRONCE 2</th>
+              <th>DEL.BRONCE 2</th>
             </tr>
           </thead>
           <tbody>

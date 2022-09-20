@@ -137,6 +137,6 @@ button:focus-visible {
 
 @media (max-width:640px){
   .responsi-container{
-    width: 1050px;
+    width: 900px;
   }
 }
