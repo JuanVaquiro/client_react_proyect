@@ -1,25 +1,26 @@
 import { Fragment, useEffect, useState } from 'react'
-import Constante from '../../constante'
-const TablaPlata = () => {
-  const [plata, setPlata] = useState([])
-  const [search2, setSearch2] = useState('')
+import Constante from '../../../constante'
 
-  const Plata = async () => {
+const TableSilver = () => {
+  const [silver, setSilver] = useState([])
+  const [search, setSearch2] = useState('')
+
+  const Silver = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Plata.php`)
     const dataPlata = await resp.json()
-    setPlata(dataPlata)
+    setSilver(dataPlata)
   }
 
-  const sercher2 = ({ target: { value } }) => {
+  const sercher = ({ target: { value } }) => {
     setSearch2(value)
   }
 
-  const resultSearch = plata.filter((elem) => {
-    return JSON.stringify(elem).toLowerCase().includes(search2.toLowerCase())
+  const resultSearch = silver.filter((elem) => {
+    return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase())
   })
   
   useEffect(() => {
-    Plata()
+    Silver()
   }, [])
 
   return (
@@ -27,8 +28,8 @@ const TablaPlata = () => {
       <div className="flex flex-col items-center justify-center">
       <input
       className="p-1 border-2 border-sky-500 rounded-md w-1/3 mt-3"
-      value={search2}
-      onChange={sercher2}
+      value={search}
+      onChange={sercher}
       type="text"
       placeholder="Buscador"
     />
@@ -57,4 +58,4 @@ const TablaPlata = () => {
   );
 }
 
-export default TablaPlata
+export default TableSilver

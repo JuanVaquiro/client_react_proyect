@@ -1,10 +1,9 @@
 import { Fragment, useState } from 'react'
-import TablaPlata from './Plata'
-import TablaOro from './Oro'
-import TablaBronce1 from './Bronce'
-import TablaBronce2 from './Bronce2'
-import AllMedallsPDF from '../../renderPDF/AllMedallsPDF'
-import AllMedalls from './AllMedalls'
+import TableGold from './table/Gold'
+import TableSilver from './table/Silver'
+import TableBronze from './table/Bronze'
+import TableBronze2 from './table/Bronze2'
+import AllMedalls from './table/AllMedalls'
 
 const Medalls = () => {
   const [verTodas, setVerTodas] = useState(true)
@@ -12,7 +11,6 @@ const Medalls = () => {
   const [verPlata, setVerPlata] = useState(false)
   const [verBronce1, setVerBronce1] = useState(false)
   const [verBronce2, setVerBronce2] = useState(false)
-
 
   const MostrarOro = () => { 
     setVerOro(true)
@@ -71,23 +69,23 @@ const Medalls = () => {
       
       {
         verOro ? (
-          <TablaOro />
+         <TableGold />
         ) : null
       }
      
       {
         verPlata ? (
-          <TablaPlata />
+         <TableSilver />
         ) : null
       }
       {
         verBronce1 ? (
-          <TablaBronce1 /> 
+          <TableBronze />
         ) : null
       }
       {
         verBronce2 ? (
-          <TablaBronce2 />
+          <TableBronze2 />
         ) : null
       }
       {

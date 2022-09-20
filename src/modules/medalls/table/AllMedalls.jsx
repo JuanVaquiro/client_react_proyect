@@ -1,8 +1,8 @@
 import { Fragment, useEffect, useState } from 'react'
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import Constante from '../../constante'
-import AllMedallsPDF from '../../renderPDF/AllMedallsPDF'
-import Spinner from '../../components/Loanding'
+import Constante from '../../../constante'
+import AllMedallsPDF from '../../../renderPDF/AllMedallsPDF'
+import Spinner from '../../../components/Loanding'
 
 const AllMedalls = () => {
   const [gold, setGold] = useState([])
@@ -25,13 +25,13 @@ const AllMedalls = () => {
     setSilver(dataSilver)
   }; 
 
-  const Bronce = async () => {
+  const Bronze = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce1.php`);
     const dataBronze = await resp.json();
     setBronze(dataBronze)
   };
 
-  const Bronce2 = async () => {
+  const Bronze2 = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce2.php`);
     const dataBronze2 = await resp.json();
     setBronze2(dataBronze2)
@@ -40,8 +40,8 @@ const AllMedalls = () => {
   const getMedalls = async () => {
     const result_gold = await Gold()
     const result_silver = await Silver()
-    const result_bronze = await Bronce()
-    const result_bronze2 = await Bronce2()
+    const result_bronze = await Bronze()
+    const result_bronze2 = await Bronze2()
     setMedalls({
       result_gold,
       result_silver,
