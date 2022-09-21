@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import InputSearch from '../../../components/InputSearch'
 import Constante from '../../../constante'
 
 const TableBronze2 = () => {
@@ -25,13 +26,7 @@ const TableBronze2 = () => {
 
   return (
     <div className="flex flex-col items-center justify-center responsi-container_table">
-      <input
-        className="p-1 border-2 border-sky-500 rounded-md w-1/2 mt-3 mb-3"
-        value={search}
-        onChange={Searcher}
-        type="text"
-        placeholder="Buscador"
-      />
+      <InputSearch value={search} change={Searcher} />
       <table className="table table-hover w-9/12 table-cel">
         <thead>
           <tr className='table-dark text-white'>

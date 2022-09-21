@@ -4,7 +4,7 @@ import TableSilver from './table/Silver'
 import TableBronze from './table/Bronze'
 import TableBronze2 from './table/Bronze2'
 import AllMedalls from './table/AllMedalls'
-import { Link } from "react-router-dom";
+import BtnBack from '../../components/BtnBack';
 
 const Medalls = () => {
   const [verOro, setVerOro] = useState(true)
@@ -52,52 +52,28 @@ const Medalls = () => {
 
   return (
     <Fragment>
-    <Link to="/">
-      <i class="fas fa-long-arrow-left ml-44 mt-6 text-3xl icon-back-rpns"/> 
-    </Link>
-    <div className='flex flex-col justify-center items-center responsi-btns'>
-      <div className="btn-group" 
-        role="group" aria-label="Basic outlined example">
-        <button class="btn btn-outline-primary" onClick={() => MostrarOro()}>ORO</button>
-        <button class="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
-        <button class="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
-        <button class="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
-        <button class="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>
-       {/*  <PDFDownloadLink
-          document={<AllMedallsPDF />}
-          fileName="Medalleria.pdf"
+      <BtnBack />
+      <div className="flex flex-col justify-center items-center responsi-btns">
+        <h2 className="text-3xl font-black m-3 text-center">
+          PREMIACION GENERAL Campeonato Ranking G1 Feria de las Flores 2022
+        </h2>
+        <div
+          className="btn-group"
+          role="group"
+          aria-label="Basic outlined example"
         >
-          <button className="btn btn-primary">Descargar PDF</button>
-        </PDFDownloadLink> */}
+          <button class="btn btn-outline-primary" onClick={() => MostrarOro()}>ORO</button>
+          <button class="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
+          <button class="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
+          <button class="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
+          <button class="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>
+        </div>
       </div>
-      </div>
-      
-      {
-        verOro ? (
-         <TableGold />
-        ) : null
-      }
-     
-      {
-        verPlata ? (
-         <TableSilver />
-        ) : null
-      }
-      {
-        verBronce1 ? (
-          <TableBronze />
-        ) : null
-      }
-      {
-        verBronce2 ? (
-          <TableBronze2 />
-        ) : null
-      }
-      {
-        verTodas ? (
-            <AllMedalls />
-        ) : null
-      }
+      { verOro ? <TableGold /> : null }
+      { verPlata ? <TableSilver /> : null }
+      { verBronce1 ? <TableBronze /> : null }
+      { verBronce2 ? <TableBronze2 /> : null }
+      { verTodas ? <AllMedalls /> : null }
     </Fragment>
   );
 }

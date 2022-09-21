@@ -61,7 +61,7 @@ const AllMedalls = () => {
   },[]);
 
   const getAllMedalls = gold.map(item=> {
-    const getSilver = silver.find(element=> element.cod === item.COD) ?? {}
+    const getSilver = silver.find(element=> element.COD === item.COD) ?? {}
     const getBronze = bronze.find(element=> element.COD === item.COD) ?? {}
     const getBronze2 = bronze2.find(element=> element.COD === item.COD) ?? {}
     return {

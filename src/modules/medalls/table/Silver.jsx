@@ -1,4 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
+import InputSearch from '../../../components/InputSearch'
 import Constante from '../../../constante'
 
 const TableSilver = () => {
@@ -11,7 +12,7 @@ const TableSilver = () => {
     setSilver(dataPlata)
   }
 
-  const sercher = ({ target: { value } }) => {
+  const Search = ({ target: { value } }) => {
     setSearch2(value)
   }
 
@@ -26,13 +27,7 @@ const TableSilver = () => {
   return (
     <Fragment>
       <div className="flex flex-col items-center justify-center responsi-container_table">
-      <input
-      className="p-1 border-2 border-sky-500 rounded-md w-1/2 mt-3 mb-3"
-      value={search}
-      onChange={sercher}
-      type="text"
-      placeholder="Buscador"
-    />
+      <InputSearch  value={search} change={Search} />
         <table className="table table-hover w-9/12 table-cel">
           <thead>
             <tr className='table-dark text-white'>
@@ -44,8 +39,8 @@ const TableSilver = () => {
           </thead>
           <tbody>
             {resultSearch.map((data) => (
-              <tr key={data.cod}>
-                <td>{data.cod}</td>
+              <tr key={data.COD}>
+                <td>{data.COD}</td>
                 <td>{data.PIRAMIDE}</td>
                 <td>{data.Plata}</td>
                 <td>{data.delacion_plata}</td>

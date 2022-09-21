@@ -14,12 +14,14 @@ function App() {
         <div className="flex space-x-8 responsi-card">
           <Karate1 />
           <div className="w-4/5 ml-0 mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
+          <Link to="CombatesProximos">
             <div className="border-t-4 border-t-orange-400 rounded bg-gray-50 hover:bg-gray-100">
               <article className="shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                 <i className="fa-solid fa-hand-fist text-orange-300  p-2 text-4xl"></i>
                 <span className="font-semibold">Combates Proximos</span>
               </article>
             </div>
+            </Link>
             <div className="rounded bg-gray-50 hover:bg-gray-100">
               <article className="border-t-4 border-t-sky-400  shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                 <i className="fa-solid fa-arrow-up-short-wide text-sky-400 text-4xl"></i>
@@ -34,12 +36,14 @@ function App() {
                 </article>
               </div>
             </Link>
+            <Link to="PremiacionGeneral">
             <div className="rounded bg-gray-50 hover:bg-gray-100">
               <article className="border-t-4 border-yellow-400 shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                 <i className="fa-solid fa-trophy text-yellow-400 text-4xl "></i>
                 <span className="font-semibold">Premiacion General</span>
               </article>
             </div>
+            </Link>
           </div>
           <Karate2 />
         </div>
