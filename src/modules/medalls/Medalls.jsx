@@ -52,21 +52,21 @@ const Medalls = () => {
 
   return (
     <Fragment>
-      <BtnBack />
+      <BtnBack url='/' />
       <div className="flex flex-col justify-center items-center responsi-btns">
         <h2 className="text-3xl font-black m-3 text-center">
-          PREMIACION GENERAL Campeonato Ranking G1 Feria de las Flores 2022
+          Campeonato Ranking G1 Feria de las Flores 2022
         </h2>
         <div
           className="btn-group"
           role="group"
           aria-label="Basic outlined example"
         >
-          <button class="btn btn-outline-primary" onClick={() => MostrarOro()}>ORO</button>
-          <button class="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
-          <button class="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
-          <button class="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
-          <button class="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>
+          <button className="btn btn-outline-primary" onClick={() => MostrarOro()}>ORO</button>
+          <button className="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
+          <button className="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
+          <button className="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
+          <button className="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>
         </div>
       </div>
       { verOro ? <TableGold /> : null }

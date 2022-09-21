@@ -17,7 +17,7 @@ const GeneralAward = () => {
   5
   return (
     <Fragment>
-      <BtnBack />
+      <BtnBack url='/' />
       <div className="flex flex-col items-center justify-center responsi-container_table">
         <h2 className="text-3xl font-black m-3 text-center">
           PREMIACION GENERAL Campeonato Ranking G1 Feria de las Flores 2022

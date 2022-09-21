@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Spinner from '../../components/Loanding';
+import MainTitle from '../../components/MainTitle';
 import Constante from '../../constante';
 
 const FilterGeneral = ({ delation }) => {
@@ -91,7 +92,8 @@ const FilterGeneral = ({ delation }) => {
     else {
       return (
         <div className='flex flex-col justify-center items-center responsi-container'>
-            <span>Delegacion: {delation}</span>
+          <MainTitle />
+          <span>Delegacion: {delation}</span>
           <table className="tabla">
             <thead>
               <tr className=''>
