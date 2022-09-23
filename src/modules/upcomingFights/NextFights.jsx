@@ -1,10 +1,13 @@
 import { Fragment, useEffect, useState } from 'react'
 import BtnBack from '../../components/BtnBack'
+import InputSearch from '../../components/InputSearch'
+import MainTitle from '../../components/MainTitle'
 import Constante from "../../constante"
 
 const NextFights = () => {
   const [ fightsBlue, setFighsBlue ] = useState([])
   const [ fightsRed, setFighsRed ] = useState([])
+  const [search, setSearch] = useState('')
   const [fights, setfights] = useState([])
 
   const FightsBlue = async () => {
@@ -31,11 +34,31 @@ const NextFights = () => {
   useEffect(() => {
     getFights()
   }, [])
-  
+
+  const Fights = fightsBlue.map(item=> {
+    const getFightsRed = fightsRed.find(element=> element.num === item.no) ?? {}
+    return {
+      ...item,
+      delegacion_rojo: getFightsRed?.delegacion ?? "",
+      rojo: getFightsRed?.rojo ?? "",
+    }
+  })
+  // console.log(Fights)
+
+  const Searcher = ({ target: { value } }) => {
+    setSearch(value)
+  }
+
+  const resultSearch = Fights.filter((elem) => {
+    return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase())
+  })
+
   return (
     <Fragment >
       <BtnBack url='/' />
       <div className='flex flex-col justify-center items-center responsi-container'>
+      <h2 className='text-3xl font-medium text-center'>PROXIMOS COMBATES</h2>
+      <InputSearch value={search} change={Searcher} />
       <table className="tabla">
         <thead>
           <tr className=''>
@@ -48,7 +71,16 @@ const NextFights = () => {
           </tr>
         </thead>
         <tbody>
-          
+        {resultSearch.map((params) => (
+          <tr key={params.no}>
+            <td>{params.no}</td>
+            <td>{params.categoria}</td>
+            <td>{params.delegacion}</td>
+            <td className='bg-sky-200 hover:bg-blue-400'>{params.azul}</td>
+            <td>{params.delegacion_rojo}</td>
+            <td className='bg-red-200 hover:bg-red-300'>{params.rojo}</td>
+          </tr>
+        ))}
         </tbody>
       </table>
       </div>

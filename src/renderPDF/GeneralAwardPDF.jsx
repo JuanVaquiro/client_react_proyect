@@ -135,7 +135,7 @@ const GeneralAwardPDF = ({ GeneralAward }) => {
           </View>
 
           {GeneralAward.map((data) => (
-            <View style={styles.tablaFila} key={data.COD}>
+            <View style={styles.tablaFila} key={data.cod_del}>
               <View style={styles.anchoColumnaNumber}>
                 <Text style={styles.tablaCeldaContents}>{data.cod_del}</Text>
               </View>
