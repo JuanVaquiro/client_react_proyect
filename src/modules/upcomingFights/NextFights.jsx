@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import BtnBack from '../../components/BtnBack'
 import Constante from "../../constante"
 
@@ -33,24 +33,26 @@ const NextFights = () => {
   }, [])
   
   return (
-    <div className='flex flex-col justify-center items-center responsi-container'>
-     <BtnBack url='/' />
-    <table className="tabla">
-      <thead>
-        <tr className=''>
-          <th>No</th>
-          <th>CATEGORIA</th>
-          <th>DELEGACION</th>
-          <th>AZUL</th>
-          <th>DELEGACION</th>
-          <th>ROJO</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-      </tbody>
-    </table>
-    </div>
+    <Fragment >
+      <BtnBack url='/' />
+      <div className='flex flex-col justify-center items-center responsi-container'>
+      <table className="tabla">
+        <thead>
+          <tr className=''>
+            <th>No</th>
+            <th>CATEGORIA</th>
+            <th>DELEGACION</th>
+            <th>AZUL</th>
+            <th>DELEGACION</th>
+            <th>ROJO</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      </div>
+    </Fragment>
   )
 }
 

@@ -1,15 +1,19 @@
-import { useEffect, useState } from 'react'
-import Spinner from '../../components/Loanding';
-import MainTitle from '../../components/MainTitle';
-import Constante from '../../constante';
+import { Fragment, useEffect, useState } from 'react'
+import { useParams } from "react-router-dom";
+import BtnBack from '../../components/BtnBack';
+import Spinner from '../../components/Loanding'
+import MainTitle from '../../components/MainTitle'
+import Constante from '../../constante'
 
-const FilterGeneral = ({ delation }) => {
+const FilterGeneral = () => {
     const [gold, setGold] = useState([])
     const [silver, setSilver] = useState([])
     const [bronze, setBronze] = useState([])
     const [bronze2, setBronze2] = useState([])
     const [medalls, setMedalls]= useState([])
     const [loading, setLoading] = useState(true)
+    
+    const { delation } = useParams()
   
     const Gold = async () => {
       const resp = await fetch(`${Constante.RUTA_API}/obtener_Oro.php`);
@@ -72,8 +76,6 @@ const FilterGeneral = ({ delation }) => {
         delation_bronze2: getBronze2?.delacion_bronce2 ??""
       }
     })
-    
-    delation = 'GUAVIARE'
 
     const FilterDelegation = getAllMedalls.filter( (item) => (
         item.delacion_oro === delation ||
@@ -82,7 +84,7 @@ const FilterGeneral = ({ delation }) => {
         item.delation_bronze2 === delation 
     )) 
 
-    console.log(FilterDelegation);
+    // console.log(FilterDelegation);
    
     const loader = () => { return ( <Spinner /> ) }
   
@@ -91,6 +93,8 @@ const FilterGeneral = ({ delation }) => {
     }
     else {
       return (
+      <Fragment>
+        <BtnBack  url='/PremiacionGeneral'  />
         <div className='flex flex-col justify-center items-center responsi-container'>
           <MainTitle />
           <span>Delegacion: {delation}</span>
@@ -129,6 +133,7 @@ const FilterGeneral = ({ delation }) => {
             </tbody>
           </table>
           </div>
+        </Fragment>
       );
     }
   };

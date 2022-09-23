@@ -1,10 +1,12 @@
 import { Fragment, useEffect, useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import BtnBack from '../../components/BtnBack';
 import Constante from '../../constante';
 
 const GeneralAward = () => {
   const [general, setGeneral] = useState([])
-  
+  const navigate = useNavigate();
+
   const GetGeneralAward = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtenerPuntajeGeneral.php`);
     const data = await resp.json();
@@ -17,7 +19,7 @@ const GeneralAward = () => {
   5
   return (
     <Fragment>
-      <BtnBack url='/' />
+      <BtnBack  url='/'/>
       <div className="flex flex-col items-center justify-center responsi-container_table">
         <h2 className="text-3xl font-black m-3 text-center">
           PREMIACION GENERAL Campeonato Ranking G1 Feria de las Flores 2022
@@ -48,7 +50,7 @@ const GeneralAward = () => {
             {general.map((data) => (
               <tr className="" key={data.cod_del}>
                 <td>{data.cod_del}</td>
-                <td>{data.DELEGACION}</td>
+                <td onClick={() => navigate(`/PremiacionGeneral/${data.DELEGACION}`)}>{data.DELEGACION}</td>
                 <td>{data.PUNTOS_GENERAL}</td>
                 <td>{data.PUNTUACION_MEDALLAS}</td>
                 <td className="bg-yellow-300">{data.ORO}</td>

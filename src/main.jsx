@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
        <Route path="Medalleria" element={<Medalls />} />
        <Route path="CombatesProximos" element={<NextFights />} />
        <Route path="PremiacionGeneral" element={<GeneralAward />} />
-       <Route path="PremiacionGeneral/delegacion" element={<FilterGeneral />} />
+       <Route path="PremiacionGeneral/:delation" element={<FilterGeneral />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
