@@ -97,7 +97,7 @@ const FilterGeneral = () => {
         <BtnBack  url='/PremiacionGeneral'  />
         <div className='flex flex-col justify-center items-center responsi-container'>
           <MainTitle />
-          <span>Delegacion: {delation}</span>
+          <span className='font-medium text-2xl'>Delegacion: {delation}</span>
           <table className="tabla">
             <thead>
               <tr className=''>
