@@ -56,7 +56,7 @@ const NextFights = () => {
   return (
     <Fragment >
       <BtnBack url='/' />
-      <div className='flex flex-col justify-center items-center responsi-container'>
+      <div className='flex flex-col justify-center items-center responsi-container2'>
       <h2 className='text-3xl font-medium text-center'>PROXIMOS COMBATES</h2>
       <InputSearch value={search} change={Searcher} />
       <table className="tabla">

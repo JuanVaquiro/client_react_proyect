@@ -134,6 +134,9 @@ button:focus-visible {
   .responsi-container{
     width: 900px;
   }
+  .responsi-container2{
+    width: 580px;
+  }
   .responsi-container_table{
     width: 500px;
   }
