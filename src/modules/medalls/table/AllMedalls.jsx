@@ -3,6 +3,7 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import Constante from '../../../constante'
 import AllMedallsPDF from '../../../renderPDF/AllMedallsPDF'
 import Spinner from '../../../components/Loanding'
+import BtnExport from '../../../renderExcel/BtnExportExcel'
 
 const AllMedalls = () => {
   const [gold, setGold] = useState([])
@@ -91,12 +92,15 @@ const AllMedalls = () => {
   else {
     return (
       <div className='flex flex-col justify-center items-center responsi-container'>
-        <PDFDownloadLink
-          document={<AllMedallsPDF medalls={getAllMedalls} />}
-          fileName="Medalleria.pdf"
-        >
-          <button className="btn btn-primary mt-3">Descargar PDF</button>
-        </PDFDownloadLink>
+        <div className='flex gap-2 mt-4'>
+          <PDFDownloadLink
+            document={<AllMedallsPDF medalls={getAllMedalls} />}
+            fileName="Medalleria.pdf"
+          >
+            <button className="btn btn-primary">Descargar PDF</button>
+          </PDFDownloadLink>
+          <BtnExport params={getAllMedalls} title='Medalleria'/>
+        </div>
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/2 mt-3"
           value={search}

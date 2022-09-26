@@ -1,9 +1,10 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import BtnBack from '../../components/BtnBack';
-import Constante from '../../constante';
-import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF';
+import BtnBack from '../../components/BtnBack'
+import Constante from '../../constante'
+import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
+import BtnExport from '../../renderExcel/BtnExportExcel'
 
 const GeneralAward = () => {
   const [general, setGeneral] = useState([])
@@ -18,7 +19,7 @@ const GeneralAward = () => {
   useEffect(() => {
     GetGeneralAward()
   }, [])
-  5
+
   return (
     <Fragment>
       <BtnBack url="/" />
@@ -35,14 +36,17 @@ const GeneralAward = () => {
             ☑ La general se calcula por la mayor cantidad de medallas de oro,
             plata y bronce en su respectivo orden.
           </span>
-          <PDFDownloadLink
-            document={<GeneralAwardPDF GeneralAward={general} />}
-            fileName="PremiacionGeneral.pdf"
-          >
-            <button className="btn btn-primary mt-3">Descargar PDF</button>
-          </PDFDownloadLink>
+          <div className='flex gap-2 mt-4'>
+            <PDFDownloadLink
+              document={<GeneralAwardPDF GeneralAward={general} />}
+              fileName="PremiacionGeneral.pdf"
+            >
+              <button className="btn btn-primary">Descargar PDF</button>
+            </PDFDownloadLink>
+          <BtnExport params={general} title='PremiacionGeneral3'/>
+          </div>
         </div>
-        <table className="tabla text-center w-9/12 text-xl">
+        <table  id="tableID" className="tabla text-center w-9/12 text-xl">
           <thead>
             <tr>
               <th>#</th>
