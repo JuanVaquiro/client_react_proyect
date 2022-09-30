@@ -92,14 +92,14 @@ const AllMedalls = () => {
   else {
     return (
       <div className='flex flex-col justify-center items-center responsi-container'>
-        <div className='flex gap-2 mt-4'>
+        <div className='flex gap-2 mt-3'>
           <PDFDownloadLink
             document={<AllMedallsPDF medalls={getAllMedalls} />}
             fileName="Medalleria.pdf"
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <BtnExport params={getAllMedalls} title='Medalleria'/>
+          <BtnExport  params='TableXLSX' title='Medalleria'/>
         </div>
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/2 mt-3"
@@ -108,7 +108,7 @@ const AllMedalls = () => {
           type="text"
           placeholder="Buscador"
         />
-        <table className="tabla">
+        <table id="TableXLSX" className="tabla">
           <thead>
             <tr className=''>
               <th>*</th>
@@ -118,9 +118,9 @@ const AllMedalls = () => {
               <th>DEL.ORO</th>
               <th>PLATA</th>
               <th>DEL.PLATA</th>
-              <th>Bronce 1</th>
+              <th>BRONCE 1</th>
               <th>DEL.BRONCE 1</th>
-              <th>Bronce 2</th>
+              <th>BRONCE 2</th>
               <th>DEL.BRONCE 2</th>
             </tr>
           </thead>

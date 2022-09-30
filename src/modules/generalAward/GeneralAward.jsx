@@ -36,17 +36,17 @@ const GeneralAward = () => {
             ☑ La general se calcula por la mayor cantidad de medallas de oro,
             plata y bronce en su respectivo orden.
           </span>
-          <div className='flex gap-2 mt-4'>
+          <div className='flex gap-2 mt-3'>
             <PDFDownloadLink
               document={<GeneralAwardPDF GeneralAward={general} />}
               fileName="PremiacionGeneral.pdf"
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>
-          <BtnExport params={general} title='PremiacionGeneral3'/>
+          <BtnExport params='TableXLSX' title='PremiacionGeneral'/>
           </div>
         </div>
-        <table  id="tableID" className="tabla text-center w-9/12 text-xl">
+        <table  id="TableXLSX" className="tabla text-center w-9/12 text-xl">
           <thead>
             <tr>
               <th>#</th>
