@@ -58,9 +58,9 @@ const GeneralAward = () => {
               <th>BRONCE</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody  className="cursor-pointer">
             {general.map((data) => (
-              <tr className="" key={data.cod_del}>
+              <tr key={data.cod_del}>
                 <td>{data.cod_del}</td>
                 <td
                   onClick={() =>

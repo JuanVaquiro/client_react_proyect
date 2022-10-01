@@ -4,6 +4,7 @@ import BtnBack from '../../components/BtnBack';
 import Spinner from '../../components/Loanding'
 import MainTitle from '../../components/MainTitle'
 import Constante from '../../constante'
+import BtnExport from '../../renderExcel/BtnExportExcel';
 
 const FilterGeneral = () => {
     const [gold, setGold] = useState([])
@@ -94,11 +95,14 @@ const FilterGeneral = () => {
     else {
       return (
       <Fragment>
-        <BtnBack  url='/PremiacionGeneral'  />
+        <BtnBack url='/PremiacionGeneral' />
         <div className='flex flex-col justify-center items-center responsi-container'>
-          <MainTitle />
-          <span className='font-medium text-2xl'>Delegacion: {delation}</span>
-          <table className="tabla">
+        <MainTitle />
+        <span className='font-medium text-2xl'>Delegacion: {delation}</span>
+        <div className='felx gap-2 mt-3'>
+          <BtnExport params='filterGeneral' title={delation} />
+        </div>
+          <table id='filterGeneral' className='tabla'>
             <thead>
               <tr className=''>
                 <th>*</th>

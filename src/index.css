@@ -54,7 +54,7 @@ button:focus-visible {
 
 .tabla tr:hover{
   background-color: rgba(92, 116, 253, 0.904);
-  cursor: pointer;
+  /* cursor: default; */
 }
 /* Fin-tabla-pages */
 

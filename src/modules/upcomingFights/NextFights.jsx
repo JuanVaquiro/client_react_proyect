@@ -1,8 +1,11 @@
 import { Fragment, useEffect, useState } from 'react'
+import { PDFDownloadLink } from '@react-pdf/renderer'
 import BtnBack from '../../components/BtnBack'
 import InputSearch from '../../components/InputSearch'
 import Constante from "../../constante"
 import BtnExport from '../../renderExcel/BtnExportExcel'
+import NextFightsPDF from '../../renderPDF/NextFightsPDF'
+
 
 const NextFights = () => {
   const [ fightsBlue, setFighsBlue ] = useState([])
@@ -59,7 +62,12 @@ const NextFights = () => {
       <div className='flex flex-col justify-center items-center responsi-container2'>
       <h2 className='text-3xl font-medium text-center'>PROXIMOS COMBATES</h2>
       <div className='flex gap-2 mt-3'>
+        <PDFDownloadLink
+        document={<NextFightsPDF NextFights={Fights} />}
+        fileName="PremiacionGeneral.pdf"
+        >
         <button className="btn btn-primary">Descargar PDF</button>
+      </PDFDownloadLink>
         <BtnExport params='TableXLSX' title='ProximosCombates'/>
       </div>
       <InputSearch value={search} change={Searcher} />
