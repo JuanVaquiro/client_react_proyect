@@ -1,16 +1,10 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment, useState } from 'react'
+import useFecthcMedalls from '../../../hooks/useFecthMedalls'
 import InputSearch from '../../../components/InputSearch'
-import Constante from '../../../constante'
 
 const TableSilver = () => {
-  const [silver, setSilver] = useState([])
+  const { silver } = useFecthcMedalls()
   const [search, setSearch2] = useState('')
-
-  const Silver = async () => {
-    const resp = await fetch(`${Constante.RUTA_API}/obtener_Plata.php`)
-    const dataPlata = await resp.json()
-    setSilver(dataPlata)
-  }
 
   const Search = ({ target: { value } }) => {
     setSearch2(value)
@@ -20,10 +14,6 @@ const TableSilver = () => {
     return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase())
   })
   
-  useEffect(() => {
-    Silver()
-  }, [])
-
   return (
     <Fragment>
       <div className="flex flex-col items-center justify-center responsi-container_table">

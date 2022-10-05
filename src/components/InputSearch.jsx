@@ -1,4 +1,3 @@
-
 const InputSearch = ({ value, change }) => {
   return (
     <input

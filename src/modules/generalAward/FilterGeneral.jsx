@@ -1,66 +1,20 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
+import useFecthcMedalls from '../../hooks/useFecthMedalls';
 import BtnBack from '../../components/BtnBack';
 import Spinner from '../../components/Loanding'
 import MainTitle from '../../components/MainTitle'
-import Constante from '../../constante'
 import BtnExport from '../../renderExcel/BtnExportExcel';
 
 const FilterGeneral = () => {
-    const [gold, setGold] = useState([])
-    const [silver, setSilver] = useState([])
-    const [bronze, setBronze] = useState([])
-    const [bronze2, setBronze2] = useState([])
-    const [medalls, setMedalls]= useState([])
+    const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
     const [loading, setLoading] = useState(true)
-    
     const { delation } = useParams()
-  
-    const Gold = async () => {
-      const resp = await fetch(`${Constante.RUTA_API}/obtener_Oro.php`);
-      const dataGold = await resp.json();
-      setGold(dataGold)
-    };
-      
-    const Silver = async () => {
-      const resp = await fetch(`${Constante.RUTA_API}/obtener_Plata.php`);
-      const dataSilver = await resp.json();
-      setSilver(dataSilver)
-    }; 
-  
-    const Bronze = async () => {
-      const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce1.php`);
-      const dataBronze = await resp.json();
-      setBronze(dataBronze)
-    };
-  
-    const Bronze2 = async () => {
-      const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce2.php`);
-      const dataBronze2 = await resp.json();
-      setBronze2(dataBronze2)
-    }; 
-    
-    const getMedalls = async () => {
-      const result_gold = await Gold()
-      const result_silver = await Silver()
-      const result_bronze = await Bronze()
-      const result_bronze2 = await Bronze2()
-      setMedalls({
-        result_gold,
-        result_silver,
-        result_bronze,
-        result_bronze2
-      })
-    }
-  
-    useEffect(() => {
-      getMedalls()
-    }, []);
   
     useEffect(() => {
       setTimeout(() => {  
         setLoading(false)
-      },3500)
+      },1800)
     },[]);
   
     const getAllMedalls = gold.map(item=> {
@@ -85,8 +39,6 @@ const FilterGeneral = () => {
         item.delation_bronze2 === delation 
     )) 
 
-    // console.log(FilterDelegation);
-   
     const loader = () => { return ( <Spinner /> ) }
   
     if(loading){

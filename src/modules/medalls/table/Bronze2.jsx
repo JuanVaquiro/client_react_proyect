@@ -1,29 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import InputSearch from '../../../components/InputSearch'
-import Constante from '../../../constante'
+import useFecthcMedalls from '../../../hooks/useFecthMedalls'
 
 const TableBronze2 = () => {
-  const [bronze, setBronze] = useState([])
+  const { bronze2 } = useFecthcMedalls()
   const [search, setSearch] = useState('')
-
-  const Bronce = async () => {
-    const resp = await fetch(`${Constante.RUTA_API}/obtener_Bronce2.php`)
-    const dataBronze = await resp.json()
-    setBronze(dataBronze)
-  }
 
   const Searcher = ({ target: { value } }) => {
     setSearch(value)
   }
 
-  const resultSearch = bronze.filter((elem) => {
+  const resultSearch = bronze2.filter((elem) => {
     return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase())
   })
   
-  useEffect(() => {
-    Bronce()
-  }, [])
-
   return (
     <div className="flex flex-col items-center justify-center responsi-container_table">
       <InputSearch value={search} change={Searcher} />
