@@ -5,6 +5,7 @@ import TableBronze from './table/Bronze'
 import TableBronze2 from './table/Bronze2'
 import AllMedalls from './table/AllMedalls'
 import BtnBack from '../../components/BtnBack';
+import MainTitle from '../../components/MainTitle'
 
 const Medalls = () => {
   const [verOro, setVerOro] = useState(true)
@@ -54,9 +55,8 @@ const Medalls = () => {
     <Fragment>
       <BtnBack url='/' />
       <div className="flex flex-col justify-center items-center responsi-btns">
-        <h2 className="text-3xl font-black m-3 text-center">
-          Campeonato Ranking G1 Feria de las Flores 2022
-        </h2>
+        <MainTitle />
+
         <div
           className="btn-group"
           role="group"

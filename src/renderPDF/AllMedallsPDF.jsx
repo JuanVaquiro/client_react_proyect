@@ -1,4 +1,6 @@
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { Page, Text, View, Document, StyleSheet, Image } from "@react-pdf/renderer";
+import { NowDate, Hours, ImgChampionship, Logo, Title } from "./headerPDF";
+
 
 const styles = StyleSheet.create({
   title: {
@@ -65,12 +67,48 @@ const styles = StyleSheet.create({
     borderLeftWidthL: 0,
     borderTopWidth: 0,
   },
+  MainHead:{
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10
+      },
+      head: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 14,
+        marginLeft: 28
+      },
+      textHead:{
+        fontSize: 12,
+        textAlign: 'center',
+      }
 });
 
 const AllMedallsPDF = ({ medalls }) => {
   return (
     <Document>
       <Page size="A4">
+      <View style={styles.MainHead}>
+          <View style={{ width: 110, marginLeft: 40 }}>
+            <Image
+              style={{ width: 110 }}
+              src={ImgChampionship()}
+            />
+          </View>
+          <View style={styles.head}>
+            <Text>{Title} </Text>
+            <Text style={styles.textHead}>{NowDate()}</Text>
+            <Text style={styles.textHead}>{Hours()}</Text>
+        
+            <Image 
+              style={{ width: 240 }} 
+              src={Logo()} 
+            />
+          </View>
+        </View>
         <View style={styles.container}>
           <Text style={styles.title}>Tabla Medalleria ORO</Text>
         </View>

@@ -5,11 +5,12 @@ import BtnBack from '../../components/BtnBack'
 import Constante from '../../constante'
 import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
 import BtnExport from '../../renderExcel/BtnExportExcel'
+import MainTitle from '../../components/MainTitle';
 
 const GeneralAward = () => {
   const [general, setGeneral] = useState([])
   const navigate = useNavigate();
-
+ 
   const GetGeneralAward = async () => {
     const resp = await fetch(`${Constante.RUTA_API}/obtenerPuntajeGeneral.php`);
     const data = await resp.json();
@@ -24,9 +25,10 @@ const GeneralAward = () => {
     <Fragment>
       <BtnBack url="/" />
       <div className="flex flex-col items-center justify-center responsi-container_table">
-        <h2 className="text-3xl font-black m-3 text-center">
-          PREMIACION GENERAL Campeonato Ranking G1 Feria de las Flores 2022
+        <h2 className="font-extrabold text-center text-4xl lg:text-4xl bg-clip-text">
+          Premiacion General
         </h2>
+        <MainTitle />
         <div className="flex flex-col items-center p-3">
           <span className="font-medium">
             ☑ Para que la medalla sea puntuable, deben haber mínimo 3
@@ -36,17 +38,17 @@ const GeneralAward = () => {
             ☑ La general se calcula por la mayor cantidad de medallas de oro,
             plata y bronce en su respectivo orden.
           </span>
-          <div className='flex gap-2 mt-3'>
+          <div className="flex gap-2 mt-3">
             <PDFDownloadLink
               document={<GeneralAwardPDF GeneralAward={general} />}
               fileName="PremiacionGeneral.pdf"
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>
-          <BtnExport params='TableXLSX' title='PremiacionGeneral'/>
+            <BtnExport params="TableXLSX" title="PremiacionGeneral" />
           </div>
         </div>
-        <table  id="TableXLSX" className="tabla text-center w-9/12 text-xl">
+        <table id="TableXLSX" className="tabla text-center w-9/12 text-xl">
           <thead>
             <tr>
               <th>#</th>
@@ -58,7 +60,7 @@ const GeneralAward = () => {
               <th>BRONCE</th>
             </tr>
           </thead>
-          <tbody  className="cursor-pointer">
+          <tbody className="cursor-pointer">
             {general.map((data) => (
               <tr key={data.cod_del}>
                 <td>{data.cod_del}</td>

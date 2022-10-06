@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom'
 import Footer from './components/Footer'
 import Karate1 from './components/logos/Karate1'
 import Karate2 from './components/logos/Karate2'
+import MainTitle from './components/MainTitle'
 
 function App() {
   return (
     <Fragment>
       <main className="flex flex-col justify-center items-center  mb-6 ">
-        <h1 className="font-extrabold text-center text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text">
-          Campeonato Ranking G1 Feria de las Flores 2022
-        </h1>
+        <MainTitle />
         <div className="flex space-x-8 responsi-card">
           <Karate1 />
           <div className="w-4/5 ml-0 mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4">
