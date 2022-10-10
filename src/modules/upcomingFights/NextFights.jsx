@@ -60,7 +60,7 @@ const NextFights = () => {
     <Fragment >
       <BtnBack url='/' />
       <div className='flex flex-col justify-center items-center responsi-container2'>
-      <h2 className='text-3xl font-medium text-center'>PROXIMOS COMBATES</h2>
+      <h2 className='text-3xl font-medium text-center'>PRÓXIMOS COMBATES</h2>
       <div className='flex gap-2 mt-3'>
         <PDFDownloadLink
         document={<NextFightsPDF NextFights={Fights} />}

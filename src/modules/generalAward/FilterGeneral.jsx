@@ -52,7 +52,7 @@ const FilterGeneral = () => {
         <BtnBack url='/PremiacionGeneral' />
         <div className='flex flex-col justify-center items-center responsi-container'>
         <MainTitle />
-        <span className='font-medium text-2xl'>Delegacion: {delation}</span>
+        <span className='font-medium text-2xl'>Delegación: {delation}</span>
         <div className='felx gap-2 mt-3'>
         <PDFDownloadLink
               document={ <FilterGeneralPDF filterGeneral={FilterDelegation} delacion={delation} />}

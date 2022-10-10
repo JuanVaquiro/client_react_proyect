@@ -26,7 +26,7 @@ const GeneralAward = () => {
       <BtnBack url="/" />
       <div className="flex flex-col items-center justify-center responsi-container_table">
         <h2 className="font-extrabold text-center text-4xl lg:text-4xl bg-clip-text">
-          Premiacion General
+          Premiación General
         </h2>
         <MainTitle />
         <div className="flex flex-col items-center p-3">

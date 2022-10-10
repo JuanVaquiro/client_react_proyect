@@ -144,7 +144,7 @@ const GeneralAwardPDF = ({ GeneralAward }) => {
           </View>
         </View>
         <View style={styles.container}>
-          <Text style={styles.title}>PREMIACION GENERAL</Text>
+          <Text style={styles.title}>PREMIACIÓN GENERAL</Text>
         </View>
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>

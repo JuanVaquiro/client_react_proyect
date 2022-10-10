@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   tablaCeldaHeader: {
     textAlign: "center",
     margin: 2,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: "bold",
     color: "white",
   },
@@ -141,7 +141,7 @@ const FilterGeneralPDF = ({ filterGeneral, delacion }) => {
           </View>
         </View>
         <View style={styles.container}>
-          <Text style={styles.title}>PREMIACION POR DELEGACION: {delacion}</Text>
+          <Text style={styles.title}>PREMIACION POR DELEGACIÓN: {delacion}</Text>
         </View>
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>
