@@ -1,10 +1,12 @@
 import { Fragment, useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
+import { PDFDownloadLink } from '@react-pdf/renderer'
 import useFecthcMedalls from '../../hooks/useFecthMedalls';
 import BtnBack from '../../components/BtnBack';
 import Spinner from '../../components/Loanding'
 import MainTitle from '../../components/MainTitle'
 import BtnExport from '../../renderExcel/BtnExportExcel';
+import FilterGeneralPDF from '../../renderPDF/FilterGeneralPDF';
 
 const FilterGeneral = () => {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
@@ -52,6 +54,12 @@ const FilterGeneral = () => {
         <MainTitle />
         <span className='font-medium text-2xl'>Delegacion: {delation}</span>
         <div className='felx gap-2 mt-3'>
+        <PDFDownloadLink
+              document={ <FilterGeneralPDF filterGeneral={FilterDelegation} delacion={delation} />}
+              fileName="PremiacionDelegacion.pdf"
+            >
+              <button className="btn btn-primary">Descargar PDF</button>
+            </PDFDownloadLink>
           <BtnExport params='filterGeneral' title={delation} />
         </div>
           <table id='filterGeneral' className='tabla'>

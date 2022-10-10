@@ -11,7 +11,7 @@ const TableGold = () => {
   };
 
   const resultSearch = gold.filter((elem) => {
-    return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase()) 
+    return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase() )
   });
 
   return (

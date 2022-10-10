@@ -6,7 +6,6 @@ const TableBronze = () => {
   const { bronze } = useFecthcMedalls()
   const [search, setSearch] = useState('')
   
-  console.log(bronze);
   const Search = ({ target: { value } }) => {
     setSearch(value)
   }
