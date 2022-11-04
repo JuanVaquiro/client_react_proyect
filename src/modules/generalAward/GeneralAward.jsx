@@ -45,7 +45,12 @@ const GeneralAward = () => {
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>
-            <BtnExport params="TableXLSX" title="PremiacionGeneral" />
+           {/*  <BtnExport params="TableXLSX" title="PremiacionGeneral" /> */}
+            <a href="https://colombiatkd.comunisoft.com/reportePremiacionGeneral.php">
+              <button className='btn btn-success'>
+                Descargar Excel
+              </button>
+            </a>
           </div>
         </div>
         <table id="TableXLSX" className="tabla text-center w-9/12 text-xl">

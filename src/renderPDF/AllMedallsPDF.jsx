@@ -1,5 +1,5 @@
 import { Page, Text, View, Document, StyleSheet, Image } from "@react-pdf/renderer";
-import { NowDate, Hours, ImgChampionship, Logo, Title } from "./headerPDF";
+import { NowDate, Hours, ImgChampionship, Logo, MainTitle } from "./headerPDF";
 
 const styles = StyleSheet.create({
   title: {
@@ -129,7 +129,7 @@ const AllMedallsPDF = ({ medalls }) => {
             />
           </View>
           <View style={styles.head}>
-            <Text>{Title} </Text>
+            <Text>{MainTitle()}</Text>
             <Text style={styles.textHead}>{NowDate()}</Text>
             <Text style={styles.textHead}>{Hours()}</Text>
         

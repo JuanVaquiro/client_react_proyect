@@ -54,7 +54,12 @@ const AllMedalls = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <BtnExport  params='TableXLSX' title='Medalleria'/>
+          {/* <BtnExport  params='TableXLSX' title='Medalleria'/> */}
+          <a href="https://colombiatkd.comunisoft.com/reporteMedalleria.php">
+              <button className='btn btn-success'>
+                Descargar Excel
+              </button>
+          </a>
         </div>
         <input
           className="p-1 border-2 border-sky-500 rounded-md w-1/2 mt-3"

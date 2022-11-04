@@ -48,54 +48,64 @@ const FilterGeneral = () => {
     }
     else {
       return (
-      <Fragment>
-        <BtnBack url='/PremiacionGeneral' />
-        <div className='flex flex-col justify-center items-center responsi-container'>
-        <MainTitle />
-        <span className='font-medium text-2xl'>Delegación: {delation}</span>
-        <div className='felx gap-2 mt-3'>
-        <PDFDownloadLink
-              document={ <FilterGeneralPDF filterGeneral={FilterDelegation} delacion={delation} />}
-              fileName="PremiacionDelegacion.pdf"
-            >
-              <button className="btn btn-primary">Descargar PDF</button>
-            </PDFDownloadLink>
-          <BtnExport params='filterGeneral' title={delation} />
-        </div>
-          <table id='filterGeneral' className='tabla'>
-            <thead>
-              <tr className=''>
-                <th>*</th>
-                <th>#DP</th>
-                <th>PIRAMIDE</th>
-                <th>ORO</th>
-                <th>DEL.ORO</th>
-                <th>PLATA</th>
-                <th>DEL.PLATA</th>
-                <th>Bronce 1</th>
-                <th>DEL.BRONCE 1</th>
-                <th>Bronce 2</th>
-                <th>DEL.BRONCE 2</th>
-              </tr>
-            </thead>
-            <tbody>
-              {FilterDelegation.map((params) => (
-                <tr key={params.COD}>
-                  <td>{params.COD}</td>
-                  <td>{params.CANT_DEPORTISTAS}</td>
-                  <td>{params.PIRAMIDE}</td>
-                  <td className="bg-yellow-300">{params.Oro}</td>
-                  <td>{params.delacion_oro}</td>
-                  <td className="bg-slate-300">{params.silver}</td>
-                  <td>{params.delation_silver}</td>
-                  <td className="bg-orange-300">{params.bronze}</td>
-                  <td>{params.delation_bronze}</td>
-                  <td className="bg-orange-300">{params.bronze2}</td>
-                  <td>{params.delation_bronze2}</td>
+        <Fragment>
+          <BtnBack url="/PremiacionGeneral" />
+          <div className="flex flex-col justify-center items-center responsi-container">
+            <MainTitle />
+            <span className="font-medium text-2xl">Delegación: {delation}</span>
+            <div className="flex gap-2 mt-3">
+              <PDFDownloadLink
+                document={
+                  <FilterGeneralPDF
+                    filterGeneral={FilterDelegation}
+                    delacion={delation}
+                  />
+                }
+                fileName="PremiacionDelegacion.pdf"
+              >
+                <button className="btn btn-primary">Descargar PDF</button>
+              </PDFDownloadLink>
+              <a
+                className=""
+                href={`https://colombiatkd.comunisoft.com/reportePremiacionPorDelegacion.php?delegacion=${delation}`}
+              >
+                <button className="btn btn-success">Descargar Excel</button>
+              </a>
+            </div>
+            <table id="filterGeneral" className="tabla">
+              <thead>
+                <tr className="">
+                  <th>*</th>
+                  <th>#DP</th>
+                  <th>PIRAMIDE</th>
+                  <th>ORO</th>
+                  <th>DEL.ORO</th>
+                  <th>PLATA</th>
+                  <th>DEL.PLATA</th>
+                  <th>Bronce 1</th>
+                  <th>DEL.BRONCE 1</th>
+                  <th>Bronce 2</th>
+                  <th>DEL.BRONCE 2</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {FilterDelegation.map((params) => (
+                  <tr key={params.COD}>
+                    <td>{params.COD}</td>
+                    <td>{params.CANT_DEPORTISTAS}</td>
+                    <td>{params.PIRAMIDE}</td>
+                    <td className="bg-yellow-300">{params.Oro}</td>
+                    <td>{params.delacion_oro}</td>
+                    <td className="bg-slate-300">{params.silver}</td>
+                    <td>{params.delation_silver}</td>
+                    <td className="bg-orange-300">{params.bronze}</td>
+                    <td>{params.delation_bronze}</td>
+                    <td className="bg-orange-300">{params.bronze2}</td>
+                    <td>{params.delation_bronze2}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </Fragment>
       );

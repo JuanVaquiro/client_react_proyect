@@ -13,10 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
        <Route path='/' element={<App />} />
-       <Route path="Medalleria" element={<Medalls />} />
-       <Route path="CombatesProximos" element={<NextFights />} />
-       <Route path="PremiacionGeneral" element={<GeneralAward />} />
-       <Route path="PremiacionGeneral/:delation" element={<FilterGeneral />} />
+       <Route path="/Medalleria" element={<Medalls />} />
+       <Route path="/CombatesProximos" element={<NextFights />} />
+       <Route path="/PremiacionGeneral" element={<GeneralAward />} />
+       <Route path="/PremiacionGeneral/:delation" element={<FilterGeneral />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

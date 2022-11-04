@@ -1,5 +1,5 @@
 const Constante = {
-  RUTA_API: 'https://conoceelespinal.com.co/'
+  RUTA_API: 'http://localhost/copia/'
 }
 
 export default Constante
