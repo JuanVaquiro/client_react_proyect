@@ -35,7 +35,6 @@ const MainTitle = () => {
 
   const textTitle = title.map((index) => index.nombre);
 
-  console.log(textTitle);
   return textTitle;
 };
  

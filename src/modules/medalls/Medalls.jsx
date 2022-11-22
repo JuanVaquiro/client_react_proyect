@@ -53,27 +53,57 @@ const Medalls = () => {
 
   return (
     <Fragment>
-      <BtnBack url='/' />
+      <BtnBack url="/" />
       <div className="flex flex-col justify-center items-center responsi-btns">
         <MainTitle />
-
-        <div
-          className="btn-group"
-          role="group"
-          aria-label="Basic outlined example"
+      <div
+        className="btn-group"
+        role="group"
+        aria-label="medalls"
+      >
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => MostrarOro()}
         >
-          <button className="btn btn-outline-primary" onClick={() => MostrarOro()}>ORO</button>
-          <button className="btn btn-outline-primary" onClick={() => MostrarPlata()}>PLATA</button>
-          <button className="btn btn-outline-primary" onClick={() => MostrarBreonce1()}>BRONCE 1</button>
-          <button className="btn btn-outline-primary" onClick={() => MostrarBreonce2()}>BRONCE 2</button>
-          <button className="btn btn-outline-primary" onClick={() => MostrarTodas()}>MEDALLERIA</button>
-        </div>
+          ORO
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => MostrarPlata()}
+        >
+          PLATA
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => MostrarBreonce1()}
+        >
+          BRONCE 1
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => MostrarBreonce2()}
+        >
+          BRONCE 2
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary"
+          onClick={() => MostrarTodas()}
+        >
+          MEDALLERIA
+        </button>
       </div>
-      { verOro ? <TableGold /> : null }
-      { verPlata ? <TableSilver /> : null }
-      { verBronce1 ? <TableBronze /> : null }
-      { verBronce2 ? <TableBronze2 /> : null }
-      { verTodas ? <AllMedalls /> : null }
+      </div>
+
+      {verOro ? <TableGold /> : null}
+      {verPlata ? <TableSilver /> : null}
+      {verBronce1 ? <TableBronze /> : null}
+      {verBronce2 ? <TableBronze2 /> : null}
+      {verTodas ? <AllMedalls /> : null}
     </Fragment>
   );
 }
