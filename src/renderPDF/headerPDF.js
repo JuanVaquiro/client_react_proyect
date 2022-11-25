@@ -15,9 +15,9 @@ const Hours = () => {
     return hours
 }
 
-const Logo = () => '/src/assets/img/logo.png'
+const Logo = () => '/src/multimedia/logo.png'
 
-const ImgChampionship = () => '/src/assets/img/KarateTorneo.jpg'
+const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
 
 
 const MainTitle = () => {
