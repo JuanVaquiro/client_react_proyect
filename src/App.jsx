@@ -49,9 +49,9 @@ function App() {
           </div>
           <Karate2 />
         </div>
-        <span className="mt-8 text-sm underline underline-offset-4">
+        <a href={`${'./link'}`} className="pdfPoomsae mt-8 text-sm underline underline-offset-4">
           Ver Resultados Poomsae y Freestyle
-        </span>
+        </a>
       </main>
       <Footer />
     </Fragment>
