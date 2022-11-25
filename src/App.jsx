@@ -50,10 +50,10 @@ function App() {
           <Karate2 />
         </div>
         <div className='flex flex-col mt-3'>
-          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf `} className="pdfPoomsae m-2 text-sm underline underline-offset-4">
+          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf `} target="_blank" className="pdfPoomsae m-2 text-sm underline underline-offset-4">
             anexo1.pdf
           </a>
-          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} className="pdfPoomsae m-2 text-sm underline underline-offset-4">
+          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} target="_blank" className="pdfPoomsae m-2 text-sm underline underline-offset-4">
             anexo2.pdf
           </a>
         </div>
