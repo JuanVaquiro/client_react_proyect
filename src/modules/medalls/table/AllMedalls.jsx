@@ -54,7 +54,6 @@ const AllMedalls = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          {/* <BtnExport  params='TableXLSX' title='Medalleria'/> */}
           <a href="https://colombiatkd.comunisoft.com/reporteMedalleria.php">
               <button className='btn btn-success'>
                 Descargar Excel

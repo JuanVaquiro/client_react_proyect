@@ -1,5 +1,5 @@
 const Constante = {
-  RUTA_API: 'http://localhost/projectTKD/'
+  RUTA_API: 'https://colombiatkd.comunisoft.com/'
 }
 
 export default Constante

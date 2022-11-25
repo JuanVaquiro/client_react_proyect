@@ -68,7 +68,6 @@ const NextFights = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          {/* <BtnExport params="TableXLSX" title="ProximosCombates" /> */}
           <a href="https://colombiatkd.comunisoft.com/reporteCombatesProximos.php">
             <button className="btn btn-success">Descargar Excel</button>
           </a>
