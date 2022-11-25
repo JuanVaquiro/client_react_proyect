@@ -5,7 +5,7 @@ import BtnBack from '../../components/BtnBack'
 import Constante from '../../constante'
 import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
 import MainTitle from '../../components/MainTitle';
-import Constante from '../../constante';
+
 
 const GeneralAward = () => {
   const [general, setGeneral] = useState([])
