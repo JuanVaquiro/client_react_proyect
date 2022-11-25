@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Karate1 from './components/logos/Karate1'
 import Karate2 from './components/logos/Karate2'
 import MainTitle from './components/MainTitle'
+import Constante from './constante'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
               </div>
             </Link>
             <div className="rounded bg-gray-50 hover:bg-gray-100">
-              <a href="https://colombiatkd.comunisoft.com/piramides.php">
+              <a href={`${Constante.RUTA_API}`}>
                 <article className="border-t-4 border-t-sky-400  shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                   <i className="fa-solid fa-arrow-up-short-wide text-sky-400 text-4xl"></i>
                   <span className="font-semibold">Pirámide</span>

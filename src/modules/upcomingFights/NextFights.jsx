@@ -3,7 +3,6 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import BtnBack from '../../components/BtnBack'
 import InputSearch from '../../components/InputSearch'
 import Constante from "../../constante"
-import BtnExport from '../../renderExcel/BtnExportExcel'
 import NextFightsPDF from '../../renderPDF/NextFightsPDF'
 
 
@@ -68,7 +67,7 @@ const NextFights = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <a href="http://piramides.comunisoft.com/reporteCombatesProximos.php">
+          <a href={`${Constante.RUTA_API}/reporteCombatesProximos.php`}>
             <button className="btn btn-success">Descargar Excel</button>
           </a>
         </div>

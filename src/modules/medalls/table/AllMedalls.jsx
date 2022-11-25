@@ -3,7 +3,7 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import useFecthcMedalls from '../../../hooks/useFecthMedalls'
 import AllMedallsPDF from '../../../renderPDF/AllMedallsPDF'
 import Spinner from '../../../components/Loanding'
-import BtnExport from '../../../renderExcel/BtnExportExcel'
+import Constante from '../../../constante'
 
 const AllMedalls = () => {
   const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
@@ -54,7 +54,7 @@ const AllMedalls = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <a href="http://piramides.comunisoft.com/reporteMedalleria.php">
+          <a href={`${Constante.RUTA_API}/reporteMedalleria.php`}>
               <button className='btn btn-success'>
                 Descargar Excel
               </button>

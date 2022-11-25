@@ -5,7 +5,7 @@ import useFecthcMedalls from '../../hooks/useFecthMedalls';
 import BtnBack from '../../components/BtnBack';
 import Spinner from '../../components/Loanding'
 import MainTitle from '../../components/MainTitle'
-import BtnExport from '../../renderExcel/BtnExportExcel';
+import Constante from '../../constante';
 import FilterGeneralPDF from '../../renderPDF/FilterGeneralPDF';
 
 const FilterGeneral = () => {
@@ -67,7 +67,7 @@ const FilterGeneral = () => {
               </PDFDownloadLink>
               <a
                 className=""
-                href={`http://piramides.comunisoft.com/reportePremiacionPorDelegacion.php?delegacion=${delation}`}
+                href={`${Constante.RUTA_API}/reportePremiacionPorDelegacion.php?delegacion=${delation}`}
               >
                 <button className="btn btn-success">Descargar Excel</button>
               </a>

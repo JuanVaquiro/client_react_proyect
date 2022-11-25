@@ -4,8 +4,8 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import BtnBack from '../../components/BtnBack'
 import Constante from '../../constante'
 import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
-import BtnExport from '../../renderExcel/BtnExportExcel'
 import MainTitle from '../../components/MainTitle';
+import Constante from '../../constante';
 
 const GeneralAward = () => {
   const [general, setGeneral] = useState([])
@@ -45,7 +45,7 @@ const GeneralAward = () => {
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>
-            <a href="http://piramides.comunisoft.com/reportePremiacionGeneral.php">
+            <a href={`${Constante.RUTA_API}/reportePremiacionGeneral.php`}>
               <button className='btn btn-success'>
                 Descargar Excel
               </button>
