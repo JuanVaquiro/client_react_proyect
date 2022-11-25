@@ -15,9 +15,11 @@ const Hours = () => {
     return hours
 }
 
-const Logo = () => '/src/multimedia/logo.png'
+// const Logo = () => '/src/multimedia/logo.png'
+const Logo = () => '/assets/logo.png'
 
-const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
+// const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
+const ImgChampionship = () => './img/encabezado.bmp'
 
 
 const MainTitle = () => {

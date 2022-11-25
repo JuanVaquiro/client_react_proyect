@@ -49,9 +49,14 @@ function App() {
           </div>
           <Karate2 />
         </div>
-        <a href={`${'./link'}`} className="pdfPoomsae mt-8 text-sm underline underline-offset-4">
-          Ver Resultados Poomsae y Freestyle
-        </a>
+        <div className='flex flex-col mt-3'>
+          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf `} className="pdfPoomsae m-2 text-sm underline underline-offset-4">
+            anexo1.pdf
+          </a>
+          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} className="pdfPoomsae m-2 text-sm underline underline-offset-4">
+            anexo2.pdf
+          </a>
+        </div>
       </main>
       <Footer />
     </Fragment>

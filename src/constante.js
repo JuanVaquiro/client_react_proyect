@@ -1,5 +1,5 @@
 const Constante = {
-  RUTA_API: 'http://piramides.comunisoft.com'
+  RUTA_API: 'https://piramides.comunisoft.com'
 }
 
 export default Constante
