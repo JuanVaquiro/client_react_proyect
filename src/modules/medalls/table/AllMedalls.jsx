@@ -54,7 +54,7 @@ const AllMedalls = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <a href="https://colombiatkd.comunisoft.com/reporteMedalleria.php">
+          <a href="http://piramides.comunisoft.com/reporteMedalleria.php">
               <button className='btn btn-success'>
                 Descargar Excel
               </button>

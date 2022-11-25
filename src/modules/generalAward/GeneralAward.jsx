@@ -45,7 +45,7 @@ const GeneralAward = () => {
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>
-            <a href="https://colombiatkd.comunisoft.com/reportePremiacionGeneral.php">
+            <a href="http://piramides.comunisoft.com/reportePremiacionGeneral.php">
               <button className='btn btn-success'>
                 Descargar Excel
               </button>

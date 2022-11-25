@@ -68,7 +68,7 @@ const NextFights = () => {
           >
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
-          <a href="https://colombiatkd.comunisoft.com/reporteCombatesProximos.php">
+          <a href="http://piramides.comunisoft.com/reporteCombatesProximos.php">
             <button className="btn btn-success">Descargar Excel</button>
           </a>
         </div>

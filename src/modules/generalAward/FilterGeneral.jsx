@@ -67,7 +67,7 @@ const FilterGeneral = () => {
               </PDFDownloadLink>
               <a
                 className=""
-                href={`https://colombiatkd.comunisoft.com/reportePremiacionPorDelegacion.php?delegacion=${delation}`}
+                href={`http://piramides.comunisoft.com/reportePremiacionPorDelegacion.php?delegacion=${delation}`}
               >
                 <button className="btn btn-success">Descargar Excel</button>
               </a>
