@@ -6,6 +6,8 @@ import Medalls from './modules/medalls/Medalls';
 import NextFights from './modules/upcomingFights/NextFights';
 import GeneralAward from './modules/generalAward/GeneralAward';
 import FilterGeneral from './modules/generalAward/FilterGeneral';
+import Portal from './portal';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -13,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
        <Route path='/' element={<App />} />
+       <Route path="/Portal" element={<Portal />} />
        <Route path="/Medalleria" element={<Medalls />} />
        <Route path="/CombatesProximos" element={<NextFights />} />
        <Route path="/PremiacionGeneral" element={<GeneralAward />} />

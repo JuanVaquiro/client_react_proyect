@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@react-pdf/renderer": "^3.0.0",
+    "bootstrap": "^5.2.3",
     "events": "^3.3.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
+    "sass": "^1.56.1",
     "xlsx": "^0.18.5",
     "xlsx-populate": "^1.21.0"
   },

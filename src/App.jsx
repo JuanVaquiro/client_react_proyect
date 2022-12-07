@@ -5,6 +5,10 @@ import Karate1 from './components/logos/Karate1'
 import Karate2 from './components/logos/Karate2'
 import MainTitle from './components/MainTitle'
 import Constante from './constante'
+import { HAND_FIST } from './multimedia/SVG'
+import { SORT_AMOUNT_UP } from './multimedia/SVG'
+import { TROPHY } from './multimedia/SVG'
+import { MEDALL } from './multimedia/SVG'
 
 function App() {
   return (
@@ -17,7 +21,7 @@ function App() {
             <Link to="CombatesProximos">
               <div className="border-t-4 border-t-orange-400 rounded bg-gray-50 hover:bg-gray-100">
                 <article className="shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
-                  <i className="fa-solid fa-hand-fist text-orange-300  p-2 text-4xl"></i>
+                  {HAND_FIST}
                   <span className="font-semibold">Combates Próximos</span>
                 </article>
               </div>
@@ -25,7 +29,7 @@ function App() {
             <div className="rounded bg-gray-50 hover:bg-gray-100">
               <a href={`${Constante.RUTA_API}/piramides.php`}>
                 <article className="border-t-4 border-t-sky-400  shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
-                  <i className="fa-solid fa-arrow-up-short-wide text-sky-400 text-4xl"></i>
+                  {SORT_AMOUNT_UP}
                   <span className="font-semibold">Pirámide</span>
                 </article>
               </a>
@@ -33,7 +37,7 @@ function App() {
             <Link to="Medalleria">
               <div className="rounded bg-gray-50 hover:bg-gray-100">
                 <article className="border-t-4 border-t-red-400 shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
-                  <i className="text-4xl">🥇</i>
+                  {MEDALL}
                   <span className="font-semibold">Medalleria</span>
                 </article>
               </div>
@@ -41,7 +45,7 @@ function App() {
             <Link to="PremiacionGeneral">
               <div className="rounded bg-gray-50 hover:bg-gray-100">
                 <article className="border-t-4 border-yellow-400 shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
-                  <i className="fa-solid fa-trophy text-yellow-400 text-4xl "></i>
+                  {TROPHY}
                   <span className="font-semibold">Premiación General</span>
                 </article>
               </div>

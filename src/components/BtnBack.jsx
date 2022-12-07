@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import { ARROW_LEFT } from "../multimedia/SVG";
 
 const BtnBack = ({ url }) => {
   return (
     <Link to={url}>
-        <i className="fas fa-long-arrow-left ml-44 mt-6 text-3xl icon-back-rpns" />
+      {ARROW_LEFT}
     </Link>
   )
 }

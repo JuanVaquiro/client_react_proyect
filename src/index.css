@@ -11,6 +11,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+path{
+  fill: currentColor !important
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
