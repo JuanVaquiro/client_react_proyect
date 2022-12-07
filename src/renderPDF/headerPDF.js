@@ -15,12 +15,13 @@ const Hours = () => {
     return hours
 }
 
-// const Logo = () => '/src/multimedia/logo.png'
-const Logo = () => '/assets/logo.png'
+const Logo = () => '/src/multimedia/logo.png'
+// const Logo = () => '/assets/logo.png'
 
-// const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
-const ImgChampionship = () => './img/encabezado.bmp'
+const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
+// const ImgChampionship = () => './img/encabezado.bmp'
 
+const ImgDeporte = () => '/src/multimedia/deporte.png'
 
 const MainTitle = () => {
   const [title, setTitle] = useState([]);
@@ -40,4 +41,4 @@ const MainTitle = () => {
   return textTitle;
 };
  
-export { NowDate, Hours, ImgChampionship, Logo, MainTitle}
+export { NowDate, Hours, ImgChampionship, Logo, MainTitle, ImgDeporte}

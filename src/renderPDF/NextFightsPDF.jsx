@@ -1,5 +1,5 @@
 import { Page, Text, View, Document, StyleSheet, Image } from "@react-pdf/renderer";
-import { NowDate, Hours, ImgChampionship, Logo, MainTitle } from "./headerPDF";
+import { NowDate, Hours, ImgChampionship, Logo, MainTitle, ImgDeporte } from "./headerPDF";
 
 const styles = StyleSheet.create({
     title: {
@@ -80,6 +80,10 @@ const styles = StyleSheet.create({
         marginRight: 14,
         marginLeft: 28
       },
+      textTitle:{
+        fontSize: 18,
+        fontWeight: 900,
+      },
       textHead:{
         fontSize: 12,
         textAlign: 'center',
@@ -98,12 +102,15 @@ const NextFightsPDF = ({ NextFights }) => {
             />
           </View>
           <View style={styles.head}>
-            <Text>{MainTitle()} </Text>
+            <Image 
+              style={{ width: 254, margin: 10 }} 
+              src={ImgDeporte()}
+              />
+            <Text style={styles.textTitle}>{MainTitle()}</Text>
             <Text style={styles.textHead}>{NowDate()}</Text>
             <Text style={styles.textHead}>{Hours()}</Text>
-        
             <Image 
-              style={{ width: 240 }} 
+              style={{ width: 260 }} 
               src={Logo()} 
             />
           </View>
