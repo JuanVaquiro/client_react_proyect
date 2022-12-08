@@ -15,13 +15,13 @@ const Hours = () => {
     return hours
 }
 
-const Logo = () => '/src/multimedia/logo.png'
-// const Logo = () => '/assets/logo.png'
+// const Logo = () => '/src/multimedia/logo.png'
+const Logo = () => '/assets/logo.png'
 
-const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
-// const ImgChampionship = () => './img/encabezado.bmp'
+// const ImgChampionship = () => '/src/multimedia/KarateTorneo.jpg'
+const ImgChampionship = () => './img/encabezado.bmp'
 
-const ImgDeporte = () => '/src/multimedia/deporte.png'
+const ImgDeporte = () => '/img/deporte.png'
 
 const MainTitle = () => {
   const [title, setTitle] = useState([]);
@@ -31,7 +31,7 @@ const MainTitle = () => {
     const dataTitle = await resp.json();
     setTitle(dataTitle);
   };
-
+  
   useEffect(() => {
     getTitle();
   }, []);

@@ -1,15 +1,15 @@
 import { Fragment } from "react";
 import CartTornament from "./components/CartTornament";
 import Footer from "./components/Footer";
-import { CART_TITLE_NUM1 } from "./env";
-import { CART_DATE_NUM1 } from "./env";
-import { CART_SITE_NUM1 } from "./env";
-import { CART_TITLE_NUM2 } from "./env";
-import { CART_DATE_NUM2 } from "./env";
-import { CART_SITE_NUM2 } from "./env";
-import { CART_TITLE_NUM3 } from "./env";
-import { CART_DATE_NUM3 } from "./env";
-import { CART_SITE_NUM3 } from "./env";
+import { CART_TITLE_NUM1 } from "./env.js";
+import { CART_DATE_NUM1 } from "./env.js";
+import { CART_SITE_NUM1 } from "./env.js";
+import { CART_TITLE_NUM2 } from "./env.js";
+import { CART_DATE_NUM2 } from "./env.js";
+import { CART_SITE_NUM2 } from "./env.js";
+import { CART_TITLE_NUM3 } from "./env.js";
+import { CART_DATE_NUM3 } from "./env.js";
+import { CART_SITE_NUM3 } from "./env.js";
 import KARATE1 from './multimedia/encabezado.png'
 import KARATE2 from './multimedia/encabezado.png'
 import KARATE3 from './multimedia/encabezado.png'
