@@ -10,9 +10,9 @@ import { CART_SITE_NUM2 } from "./env.js";
 import { CART_TITLE_NUM3 } from "./env.js";
 import { CART_DATE_NUM3 } from "./env.js";
 import { CART_SITE_NUM3 } from "./env.js";
-import KARATE1 from './multimedia/encabezado.png'
-import KARATE2 from './multimedia/encabezado.png'
-import KARATE3 from './multimedia/encabezado.png'
+import KARATE1 from './multimedia/encabezadoUno.png'
+import KARATE2 from './multimedia/encabezadoDos.png'
+import KARATE3 from './multimedia/encabezadoTres.png'
 
 const Portal = () => {
   return (

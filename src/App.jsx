@@ -14,8 +14,8 @@ import { MEDALL } from './multimedia/SVG'
 function App() {
   return (
     <Fragment>
+      <BtnBack  url='/' />
       <main className="flex flex-col justify-center items-center  mb-6 ">
-        <BtnBack  url='/' />
         <MainTitle className="font-extrabold text-center text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text" />
         <div className="flex space-x-8 responsi-card">
           <Karate1 />
