@@ -14,12 +14,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-       <Route path='/' element={<App />} />
-       <Route path="/Portal" element={<Portal />} />
-       <Route path="/Medalleria" element={<Medalls />} />
-       <Route path="/CombatesProximos" element={<NextFights />} />
-       <Route path="/PremiacionGeneral" element={<GeneralAward />} />
-       <Route path="/PremiacionGeneral/:delation" element={<FilterGeneral />} />
+      <Route path="/" element={<Portal />} />
+       <Route path='/proyecto1/' element={<App />} />
+       <Route path="/proyecto1/Medalleria" element={<Medalls />} />
+       <Route path="/proyecto1/CombatesProximos" element={<NextFights />} />
+       <Route path="/proyecto1/PremiacionGeneral" element={<GeneralAward />} />
+       <Route path="/proyecto1/PremiacionGeneral/:delation" element={<FilterGeneral />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

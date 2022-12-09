@@ -23,7 +23,7 @@ const GeneralAward = () => {
 
   return (
     <Fragment>
-      <BtnBack url="/" />
+      <BtnBack url="/proyecto1/" />
       <div className="flex flex-col items-center justify-center responsi-container_table">
         <h2 className="font-extrabold text-center text-4xl lg:text-4xl bg-clip-text">
           Premiación General
@@ -70,21 +70,21 @@ const GeneralAward = () => {
                 <td>{data.cod_del}</td>
                 <td
                   onClick={() =>
-                    navigate(`/PremiacionGeneral/${data.DELEGACION}`)
+                    navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
                   }
                 >
                   {data.DELEGACION}
                 </td>
                 <td
                   onClick={() =>
-                    navigate(`/PremiacionGeneral/${data.DELEGACION}`)
+                    navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
                   }
                 >
                   {data.PUNTOS_GENERAL}
                 </td>
                 <td
                   onClick={() =>
-                    navigate(`/PremiacionGeneral/${data.DELEGACION}`)
+                    navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
                   }
                 >
                   {data.PUNTUACION_MEDALLAS}

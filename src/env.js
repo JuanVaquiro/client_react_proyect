@@ -1,5 +1,5 @@
 
-export const ENDPOINT_SERVET_URL = 'https://piramides.comunisoft.com'
+export const ENDPOINT_SERVET_URL = 'https://piramides.comunisoft.com/proyecto1'
 
 
 export const CART_iMG_NUM1 = ''
