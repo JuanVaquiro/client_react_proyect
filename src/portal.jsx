@@ -1,18 +1,6 @@
 import { Fragment } from "react";
 import CartTornament from "./components/CartTornament";
 import Footer from "./components/Footer";
-import { CART_TITLE_NUM1 } from "./env.js";
-import { CART_DATE_NUM1 } from "./env.js";
-import { CART_SITE_NUM1 } from "./env.js";
-import { CART_TITLE_NUM2 } from "./env.js";
-import { CART_DATE_NUM2 } from "./env.js";
-import { CART_SITE_NUM2 } from "./env.js";
-import { CART_TITLE_NUM3 } from "./env.js";
-import { CART_DATE_NUM3 } from "./env.js";
-import { CART_SITE_NUM3 } from "./env.js";
-import KARATE1 from './multimedia/encabezado.png'
-import KARATE2 from './multimedia/encabezado.png'
-import KARATE3 from './multimedia/encabezado.png'
 
 const Portal = () => {
   return (
@@ -30,22 +18,13 @@ const Portal = () => {
       </div>
       <div className="flex flex-col gap-4 items-center justify-center m-3 p-2 md:flex-row">
         <CartTornament
-          img={KARATE1}
-          title={CART_TITLE_NUM1}
-          date={CART_DATE_NUM1}
-          site={CART_SITE_NUM1}
+        
         />
         <CartTornament
-          img={KARATE2}
-          title={CART_TITLE_NUM2}
-          date={CART_DATE_NUM2}
-          site={CART_SITE_NUM2}
+         
         />
         <CartTornament
-          img={KARATE3}
-          title={CART_TITLE_NUM3}
-          date={CART_DATE_NUM3}
-          site={CART_SITE_NUM3}
+          
         />
       </div>
       <Footer />
