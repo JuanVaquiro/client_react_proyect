@@ -75,7 +75,7 @@ const NextFights = () => {
           <div className="flex gap-2 mt-3">
             <PDFDownloadLink
               document={<NextFightsPDF NextFights={Fights} />}
-              fileName="PremiacionGeneral.pdf"
+              fileName="ProximosCombates.pdf"
             >
               <button className="btn btn-primary">Descargar PDF</button>
             </PDFDownloadLink>

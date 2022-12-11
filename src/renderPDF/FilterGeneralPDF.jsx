@@ -123,8 +123,6 @@ const FilterGeneralPDF = ({ filterGeneral, delacion }) => {
     <Document>
       <Page size="RA2">
       <View style={styles.MainHead}>
-          <View style={{ width: 110, marginLeft: 40 }}>
-          </View>
           <View style={styles.head}>
             <Image 
               style={{ width: 254, margin: 10 }} 

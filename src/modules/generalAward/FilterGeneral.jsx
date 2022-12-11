@@ -61,7 +61,7 @@ const FilterGeneral = () => {
                     delacion={delation}
                   />
                 }
-                fileName="PremiacionDelegacion.pdf"
+                fileName={`PremiacionDelegacion_${delation}.pdf`}
               >
                 <button className="btn btn-primary">Descargar PDF</button>
               </PDFDownloadLink>
