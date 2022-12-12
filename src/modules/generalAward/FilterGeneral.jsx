@@ -49,7 +49,7 @@ const FilterGeneral = () => {
     else {
       return (
         <Fragment>
-          <BtnBack url="/proyecto1/PremiacionGeneral" />
+          <BtnBack url="/PremiacionGeneral" />
           <div className="flex flex-col justify-center items-center responsi-container">
             <MainTitle />
             <span className="font-medium text-2xl">Delegación: {delation}</span>

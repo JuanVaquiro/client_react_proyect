@@ -53,7 +53,7 @@ const Medalls = () => {
 
   return (
     <Fragment>
-      <BtnBack url="/proyecto1/" />
+      <BtnBack url="/" />
       <div className="flex flex-col justify-center items-center responsi-btns">
         <MainTitle />
       <div

@@ -23,7 +23,7 @@ const GeneralAward = () => {
 
   return (
     <Fragment>
-      <BtnBack url="/proyecto1/" />
+      <BtnBack url="/" />
       <div className="flex flex-col items-center justify-center responsi-container_table">
         <h2 className="font-extrabold text-center text-4xl lg:text-4xl bg-clip-text">
           Premiación General
