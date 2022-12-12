@@ -5,7 +5,6 @@ import Karate1 from './components/logos/Karate1'
 import Karate2 from './components/logos/Karate2'
 import MainTitle from './components/MainTitle'
 import Constante from './constante'
-import { NotCache } from './helpers/notCache'
 import { CART_ITEM_1 } from './env'
 import { CART_ITEM_2 } from './env'
 import { CART_ITEM_3 } from './env'
@@ -64,7 +63,6 @@ function App() {
         <div className='flex flex-col mt-3'>
           <a 
             id="CACHE-ANCOR1"
-            onClick={''} 
             href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf`} 
             target="_blank" 
             className="pdfPoomsae m-2 text-sm underline underline-offset-4"
@@ -73,7 +71,6 @@ function App() {
           </a>
           <a  
            id='CACHE-ANCOR2' 
-           onClick={''}
            href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} 
            target="_blank" 
            className="pdfPoomsae m-2 text-sm underline underline-offset-4"

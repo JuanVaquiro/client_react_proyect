@@ -5,6 +5,7 @@ import BtnBack from '../../components/BtnBack'
 import Constante from '../../constante'
 import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
 import MainTitle from '../../components/MainTitle';
+import TextGeneral from '../../components/TextGeneral';
 
 
 const GeneralAward = () => {
@@ -30,14 +31,7 @@ const GeneralAward = () => {
         </h2>
         <MainTitle />
         <div className="flex flex-col items-center p-3">
-          <span className="font-medium">
-            ☑ Para que la medalla sea puntuable, deben haber mínimo 3
-            deportistas de 3 delegaciones diferentes
-          </span>
-          <span className="font-medium">
-            ☑ La general se calcula por la mayor cantidad de medallas de oro,
-            plata y bronce en su respectivo orden.
-          </span>
+        <TextGeneral />
           <div className="flex gap-2 mt-3">
             <PDFDownloadLink
               document={<GeneralAwardPDF GeneralAward={general} />}

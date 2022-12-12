@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { PDFDownloadLink } from '@react-pdf/renderer'
+import { useNavigate } from "react-router-dom";
 import useFecthcMedalls from '../../../hooks/useFecthMedalls'
 import AllMedallsPDF from '../../../renderPDF/AllMedallsPDF'
 import Spinner from '../../../components/Loanding'
@@ -9,6 +10,7 @@ const AllMedalls = () => {
   const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {  
@@ -88,14 +90,24 @@ const AllMedalls = () => {
               <tr key={params.COD}>
                 <td>{params.COD}</td>
                 <td>{params.CANT_DEPORTISTAS}</td>
-                <td>{params.PIRAMIDE}</td>
-                <td className="bg-yellow-300">{params.Oro}</td>
+                <td
+                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
+                > {params.PIRAMIDE}</td>
+                <td 
+                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
+                  className="bg-yellow-300">{params.Oro}</td>
                 <td>{params.delacion_oro}</td>
-                <td className="bg-slate-300">{params.silver}</td>
+                <td 
+                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
+                  className="bg-slate-300">{params.silver}</td>
                 <td>{params.delation_silver}</td>
-                <td className="bg-orange-300">{params.bronze}</td>
+                <td 
+                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
+                  className="bg-orange-300">{params.bronze}</td>
                 <td>{params.delation_bronze}</td>
-                <td className="bg-orange-300">{params.bronze2}</td>
+                <td 
+                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
+                  className="bg-orange-300">{params.bronze2}</td>
                 <td>{params.delation_bronze2}</td>
               </tr>
             ))}

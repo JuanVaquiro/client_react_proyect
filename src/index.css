@@ -39,6 +39,7 @@ button:focus-visible {
   margin: 10px;
   overflow-y: scroll;
   text-align: center;
+  cursor: pointer;
 }
 
 .tabla td,
