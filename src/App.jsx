@@ -6,10 +6,18 @@ import Karate1 from './components/logos/Karate1'
 import Karate2 from './components/logos/Karate2'
 import MainTitle from './components/MainTitle'
 import Constante from './constante'
+import { NotCache } from './helpers/notCache'
+import { CART_ITEM_1 } from './env'
+import { CART_ITEM_2 } from './env'
+import { CART_ITEM_3 } from './env'
+import { CART_ITEM_4 } from './env'
+import { ANCOR_1 } from './env'
+import { ANCOR_2 } from './env'
 import { HAND_FIST } from './multimedia/SVG'
 import { SORT_AMOUNT_UP } from './multimedia/SVG'
 import { TROPHY } from './multimedia/SVG'
 import { MEDALL } from './multimedia/SVG'
+
 
 function App() {
   return (
@@ -24,7 +32,7 @@ function App() {
               <div className="border-t-4 border-t-orange-400 rounded bg-gray-50 hover:bg-gray-100">
                 <article className="shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                   {HAND_FIST}
-                  <span className="font-semibold">Combates Próximos</span>
+                  <span className="font-semibold">{CART_ITEM_1}</span>
                 </article>
               </div>
             </Link>
@@ -32,7 +40,7 @@ function App() {
               <a href={`${Constante.RUTA_API}/piramides.php`}>
                 <article className="border-t-4 border-t-sky-400  shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                   {SORT_AMOUNT_UP}
-                  <span className="font-semibold">Pirámide</span>
+                  <span className="font-semibold">{CART_ITEM_2}</span>
                 </article>
               </a>
             </div>
@@ -40,7 +48,7 @@ function App() {
               <div className="rounded bg-gray-50 hover:bg-gray-100">
                 <article className="border-t-4 border-t-red-400 shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                   {MEDALL}
-                  <span className="font-semibold">Medalleria</span>
+                  <span className="font-semibold">{CART_ITEM_3}</span>
                 </article>
               </div>
             </Link>
@@ -48,7 +56,7 @@ function App() {
               <div className="rounded bg-gray-50 hover:bg-gray-100">
                 <article className="border-t-4 border-yellow-400 shadow-md flex flex-col gap-2 items-center justify-center h-full p-6">
                   {TROPHY}
-                  <span className="font-semibold">Premiación General</span>
+                  <span className="font-semibold">{CART_ITEM_4}</span>
                 </article>
               </div>
             </Link>
@@ -56,13 +64,25 @@ function App() {
           <Karate2 />
         </div>
         <div className='flex flex-col mt-3'>
-          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf `} target="_blank" className="pdfPoomsae m-2 text-sm underline underline-offset-4">
-            anexo1.pdf
+          <a 
+            id="CACHE-ANCOR1"
+            onClick={''} 
+            href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf`} 
+            target="_blank" 
+            className="pdfPoomsae m-2 text-sm underline underline-offset-4"
+            >
+              {ANCOR_1}
           </a>
-          <a href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} target="_blank" className="pdfPoomsae m-2 text-sm underline underline-offset-4">
-            anexo2.pdf
+          <a  
+           id='CACHE-ANCOR2' 
+           onClick={''}
+           href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} 
+           target="_blank" 
+           className="pdfPoomsae m-2 text-sm underline underline-offset-4"
+           >
+              {ANCOR_2}
           </a>
-        </div>
+        </div> 
       </main>
       <Footer />
     </Fragment>
