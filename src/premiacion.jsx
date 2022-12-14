@@ -21,7 +21,7 @@ function Premiacion() {
     useEffect(() => {
         setTimeout(() => {  
           setLoading(false)
-        },1500)
+        },2100)
       },[]);
 
     const getAllMedalls = gold.map(item=> {
