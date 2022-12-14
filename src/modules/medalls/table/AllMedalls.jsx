@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { useNavigate } from "react-router-dom";
-// import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
-// import { TableWithBrowserPagination, Column, Badge } from 'react-rainbow-components';
-// import styled from 'styled-components';
 import useFecthcMedalls from '../../../hooks/useFecthMedalls'
 import AllMedallsPDF from '../../../renderPDF/AllMedallsPDF'
 import Spinner from '../../../components/Loanding'
@@ -18,7 +15,7 @@ const AllMedalls = () => {
   useEffect(() => {
     setTimeout(() => {  
       setLoading(false)
-    },1800)
+    },3900)
   },[]);
 
   const getAllMedalls = gold.map(item=> {
@@ -44,39 +41,6 @@ const AllMedalls = () => {
     return JSON.stringify(elem).toLowerCase().includes(search.toLowerCase());
   })
 
-/*   const first = async() => { 
-      return SearchResult
-   } 
-
-     const FilterAllMedalls = () => {
-      const { data, isLoading } = useQuery("COD", first )
-      const StyledBadge1 = styled(Badge)`
-       background: yellow;
-       
-      `;
-     const StatusBadge1 = ({ value }) => <StyledBadge1 label={value} variant="lightest" />;
-      return (
-        <TableWithBrowserPagination className='p-2' keyField="COD" isLoading={isLoading} data={data} 
-        variant="listview" pageSize={15} >
-            <Column width={44} header='*' field="COD"
-            onClick={() => navigate(`/Premiacion/${'PIRAMIDE'}`)} 
-              />
-            <Column width={34} header='#DP' field='CANT_DEPORTISTAS' />
-            <Column width={194} header='PIRAMIDE' field='PIRAMIDE' />
-            <Column component={StatusBadge1} width={194} header='ORO' field='Oro' />
-            <Column header='DEL.ORO' field='delacion_oro' />
-            <Column component={StatusBadge2}  width={164} header='PLATA' field='silver' />
-            <Column header='DEL.PLATA' field='delation_silver' />
-            <Column component={StatusBadge3}  width={164} header='BRONCE 1' field='bronze' />
-            <Column header='DEL.BRONCE 1' field='delation_bronze' />
-            <Column component={StatusBadge3} width={164} header='BRONCE 2' field='bronze2' />
-            <Column header='DEL.BRONCE 2' field='delation_bronze2' />
-        </TableWithBrowserPagination>
-      )
-    }
-
-  const queryClient = new QueryClient();  */
-  
   const loader = () => { return ( <Spinner /> ) }
 
   if(loading){

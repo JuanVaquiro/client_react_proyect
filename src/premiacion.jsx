@@ -1,7 +1,10 @@
+import { Fragment, useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { Fragment } from "react";
 import Podium from "./components/Podium";
 import useFecthcMedalls from './hooks/useFecthMedalls';
+import MainTitle from "./components/MainTitle";
+import Footer from "./components/Footer";
+import Spinner from "./components/Loanding";
 import Gold from './multimedia/medalGold.png'
 import Silver from './multimedia/medalSilver.png'
 import Bronze from './multimedia/medalBronze.png'
@@ -9,13 +12,17 @@ import CopaGold from './multimedia/copa-de-oro.png'
 import CopaSilver from './multimedia/copa-de-plata.png'
 import CopaBronze from './multimedia/copa-de-bronce.png'
 import Ganadores from './multimedia/ganadores.png'
-import MainTitle from "./components/MainTitle";
-import Footer from "./components/Footer";
-
 
 function Premiacion() {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
     const { piramide } = useParams()
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {  
+          setLoading(false)
+        },1500)
+      },[]);
 
     const getAllMedalls = gold.map(item=> {
         const getSilver = silver.find(element=> element.COD === item.COD) ?? {}
@@ -43,61 +50,66 @@ function Premiacion() {
       return 'MASCULINO'
      }
     }
-
-
-  return (
-    <Fragment>
-      <div className="flex flex-col items-center justify-center p-6">
-        <MainTitle />
-        <h1 className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
-          {piramide} {Genero()}
-        </h1>
-        {premiacion.map((params) => (
-          <div key={params.COD} className="flex gap-2">
-            <img className="w-2/5" src={Ganadores} alt="" />
-            <div>
-              {params.Oro != "ESPERANDO COMPETIDOR" || params.Oro != "BY" ? (
-                <Podium
-                  name={params.Oro}
-                  text={"ORO"}
-                  icon={Gold}
-                  copa={CopaGold}
-                />
-              ) : null}
-              {params.silver != "ESPERANDO COMPETIDOR" ||
-              params.silver != "BY" ? (
-                <Podium
-                  name={params.silver}
-                  text={"PLATA"}
-                  icon={Silver}
-                  copa={CopaSilver}
-                />
-              ) : null}
-              {params.bronze != "ESPERANDO COMPETIDOR" ||
-              params.bronze != "BY" ? (
-                <Podium
-                  name={params.bronze}
-                  text={"BRONCE 1"}
-                  icon={Bronze}
-                  copa={CopaBronze}
-                />
-              ) : null}
-              {params.bronze2 != "ESPERANDO COMPETIDOR" ||
-              params.bronze2 != "BY" ? (
-                <Podium
-                  name={params.bronze2}
-                  text={"BRONCE 2"}
-                  icon={Bronze}
-                  copa={CopaBronze}
-                />
-              ) : null}
-            </div>
+    const loader = () => { return ( <Spinner /> ) }
+  
+    if(loading){
+      return(loader())
+    }
+    else {
+      return (
+        <Fragment>
+          <div className="flex flex-col items-center justify-center p-6">
+            <MainTitle />
+            <h1 className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
+              {piramide} {Genero()}
+            </h1>
+            {premiacion.map((params) => (
+              <div key={params.COD} className="flex gap-2">
+                <img className="w-2/5" src={Ganadores} alt="" />
+                <div>
+                  {params.Oro != "ESPERANDO COMPETIDOR" && params.Oro != "BY" ? (
+                    <Podium
+                      name={params.Oro}
+                      text={"ORO"}
+                      icon={Gold}
+                      copa={CopaGold}
+                    />
+                  ) : null}
+                  {params.silver != "ESPERANDO COMPETIDOR" &&
+                  params.silver != "BY" ? (
+                    <Podium
+                      name={params.silver}
+                      text={"PLATA"}
+                      icon={Silver}
+                      copa={CopaSilver}
+                    />
+                  ) : null}
+                  {params.bronze != "ESPERANDO COMPETIDOR" &&
+                  params.bronze != "BY" ? (
+                    <Podium
+                      name={params.bronze}
+                      text={"BRONCE 1"}
+                      icon={Bronze}
+                      copa={CopaBronze}
+                    />
+                  ) : null}
+                  {params.bronze2 != "ESPERANDO COMPETIDOR" &&
+                  params.bronze2 != "BY" ? (
+                    <Podium
+                      name={params.bronze2}
+                      text={"BRONCE 2"}
+                      icon={Bronze}
+                      copa={CopaBronze}
+                    />
+                  ) : null}
+                </div>
+              </div>
+            ))}
+            <Footer />
           </div>
-        ))}
-        <Footer />
-      </div>
-    </Fragment>
-  );
+        </Fragment>
+    );
+  }
 }
 
 export default Premiacion
