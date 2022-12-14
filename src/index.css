@@ -127,6 +127,51 @@ button:focus-visible {
 }
 /* FIN - ContaierBox PDF  */
 
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.podium__item {
+  width: 200px;
+}
+
+.podium__rank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  /* color: #fff; */
+}
+
+.podium__city {
+  text-align: center;
+  padding: 0 .5rem;
+}
+
+.podium__number {
+  width: 27px;
+  height: 75px;
+}
+
+.podium .first {
+  min-height: 300px;
+  background-color: rgb(255, 255, 102);
+}
+
+.podium .second {
+  min-height: 200px;
+  background-color: rgb(55, 55, 251);
+}
+
+.podium .third {
+  min-height: 100px;
+  background-color: rgb(0, 162, 0);
+}
+
+
 @media (max-width:720px){
   .responsi-card{
     flex-direction: column;

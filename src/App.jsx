@@ -15,11 +15,12 @@ import { HAND_FIST } from './multimedia/SVG'
 import { SORT_AMOUNT_UP } from './multimedia/SVG'
 import { TROPHY } from './multimedia/SVG'
 import { MEDALL } from './multimedia/SVG'
-
+import { ARROW_LEFT } from './multimedia/SVG'
 
 function App() {
   return (
     <Fragment>
+      <a href="https://yo.comunisoft.com/">{ARROW_LEFT}</a>
       <main className="flex flex-col justify-center items-center  mb-6 ">
         <MainTitle className="font-extrabold text-center text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text" />
         <div className="flex space-x-8 responsi-card">

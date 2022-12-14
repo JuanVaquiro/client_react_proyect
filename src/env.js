@@ -1,5 +1,5 @@
 
-export const ENDPOINT_SERVET_URL = 'https://piramides.comunisoft.com'
+export const ENDPOINT_SERVET_URL = 'http://localhost/projectTKD'
 
 /* index 
 * Carts Items
@@ -7,7 +7,7 @@ export const ENDPOINT_SERVET_URL = 'https://piramides.comunisoft.com'
 export const CART_ITEM_1 = 'Combates Próximos'
 export const CART_ITEM_2 = 'Pirámides'
 export const CART_ITEM_3 = 'Medalleria'
-export const CART_ITEM_4 = 'Medalleria'
+export const CART_ITEM_4 = 'Premiación General'
 
 /* report ancor */
 export const ANCOR_1 = 'anexo1.pdf'
