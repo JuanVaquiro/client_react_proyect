@@ -1,5 +1,5 @@
 
-export const ENDPOINT_SERVET_URL = 'https://piramides3.comunisoft.com/'
+export const ENDPOINT_SERVET_URL = 'http://localhost/projectTKD'
 
 /* index 
 * Carts Items

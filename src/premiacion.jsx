@@ -64,12 +64,13 @@ function Premiacion() {
               {piramide} {Genero()}
             </h1>
             {premiacion.map((params) => (
-              <div key={params.COD} className="flex gap-2">
+              <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
                 <img className="w-2/5" src={Ganadores} alt="" />
                 <div>
                   {params.Oro != "ESPERANDO COMPETIDOR" && params.Oro != "BY" ? (
                     <Podium
                       name={params.Oro}
+                      color={'yellow'}
                       text={"ORO"}
                       icon={Gold}
                       copa={CopaGold}
@@ -79,6 +80,7 @@ function Premiacion() {
                   params.silver != "BY" ? (
                     <Podium
                       name={params.silver}
+                      color={'slate'}
                       text={"PLATA"}
                       icon={Silver}
                       copa={CopaSilver}
@@ -88,6 +90,7 @@ function Premiacion() {
                   params.bronze != "BY" ? (
                     <Podium
                       name={params.bronze}
+                      color={'orange'}
                       text={"BRONCE 1"}
                       icon={Bronze}
                       copa={CopaBronze}
@@ -97,6 +100,7 @@ function Premiacion() {
                   params.bronze2 != "BY" ? (
                     <Podium
                       name={params.bronze2}
+                      color={'orange'}
                       text={"BRONCE 2"}
                       icon={Bronze}
                       copa={CopaBronze}

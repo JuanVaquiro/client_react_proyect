@@ -1,17 +1,17 @@
 
 
-const Podium = ({ name, text, icon, copa}) => {
+const Podium = ({ name, text, icon, copa, color}) => {
   return (
     <div className="felx flex-col items-center mx-auto grid pt-6 gap-4 min-w-ma">
     <div className="rounded border-gray-300 border-2 h-20 shadow-md  shadow-gray-400 ">  
          <div className='flex space-x-4 p-2'>
-           <img className='w-14' src={icon} alt="" />
+           <img className='w-14' src={icon} alt="medalla" />
          <div className='flex flex-col ml-2'>
-            <span className="text-lg font-semibold">{name}</span>
-            <span className="font-medium">{text}</span>
+            <span className="text-xs md:text-lg font-semibold">{name}</span>
+            <span className={`text-xs md:text-lg font-medium text-${color}-400`}>{text}</span>
          </div>
          <div className='ml-16'>
-            <img className='w-14' src={copa} alt="" />
+            <img className='w-14' src={copa} alt="copa" />
          </div>
          </div>
       </div>      
