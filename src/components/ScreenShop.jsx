@@ -28,19 +28,10 @@ const ScreenShop = () => {
       <div className="modal"  ref={modalRef}>
         <div className="modal-dialog">
           <div className="modal-content modal-content-size">
-            <div className="modal-header">
-              <h5 className="modal-title text-lg font-bold">
-               Click derecho sobre la imagen para descargar el podio
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
             <div className="modal-body">
-               <img src={Image} alt="" />
+              <a href={Image} download="podium" >
+                <img src={Image} alt="" />
+              </a>
             </div>
             <div className="modal-footer">
               <button
@@ -52,6 +43,17 @@ const ScreenShop = () => {
               >
                 CERRAR
               </button>
+              <a href={Image} download="podium" >
+              <button
+                type="button"
+                id="btn-descargar-modal"
+                className="btn btn-success"
+                data-bs-dismiss="modal"
+                onClick={clossModal}
+              >
+                DESCARGAR
+              </button>
+              </a>
             </div>
           </div>
         </div>

@@ -44,7 +44,6 @@ function Premiacion() {
     const premiacion = getAllMedalls.filter((elem) => {
       return elem = elem.PIRAMIDE === piramide
     })
-      console.log(premiacion);
 
     const Genero = () => {
       if( piramide.charAt(0) === 'F'){
