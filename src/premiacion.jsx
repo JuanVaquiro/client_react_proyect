@@ -4,6 +4,7 @@ import Podium from "./components/Podium";
 import useFecthcMedalls from './hooks/useFecthMedalls';
 import MainTitle from "./components/MainTitle";
 import Spinner from "./components/Loanding";
+import ScreenShop from "./components/ScreenShop";
 import Gold from './multimedia/medalGold.png'
 import Silver from './multimedia/medalSilver.png'
 import Bronze from './multimedia/medalBronze.png'
@@ -11,7 +12,8 @@ import CopaGold from './multimedia/copa-de-oro.png'
 import CopaSilver from './multimedia/copa-de-plata.png'
 import CopaBronze from './multimedia/copa-de-bronce.png'
 import Ganadores from './multimedia/ganadores.png'
-import ScreenShop from "./components/ScreenShop";
+import GanadoresFm from './multimedia/ganadoresFemenino.png'
+import Banner from './multimedia/encabezadoLargo.png'
 
 function Premiacion() {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
@@ -51,6 +53,15 @@ function Premiacion() {
       return 'MASCULINO'
      }
     }
+
+    const GeneroImg = () => {
+      if( piramide.charAt(0) === 'F'){
+      return GanadoresFm
+     } else if( piramide.charAt(0) === 'M') {
+      return Ganadores
+     }
+    }
+
     const loader = () => { return ( <Spinner /> ) }
   
     if(loading){
@@ -66,7 +77,7 @@ function Premiacion() {
             </h1>
             {premiacion.map((params) => (
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
-                <img className="w-2/5" src={Ganadores} alt="" />
+                <img className="w-2/5" src={GeneroImg()} alt="" />
                 <div>
                   {params.Oro !== "ESPERANDO COMPETIDOR" && 
                   params.Oro !== "BY" ? (
@@ -115,6 +126,9 @@ function Premiacion() {
                 </div>
               </div>
             ))}
+            <div className="flex items-center justify-center m-3 p-2">
+                <img className="banner-premiar" src={Banner} alt="patrocinaores" />
+            </div>
             </div>
             <ScreenShop />
         </Fragment>

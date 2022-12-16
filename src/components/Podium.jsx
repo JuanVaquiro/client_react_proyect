@@ -1,9 +1,10 @@
 
 const Podium = ({ color, name, delation, text, icon, copa }) => {
+    
   return (
     <div className="felx flex-col items-center mx-auto grid pt-6 gap-4">
     <div className="rounded border-gray-300 border-2 h-24 shadow-md shadow-gray-400 ">  
-         <div className={`flex space-x-4 p-2 bg-${color}-200`}>
+         <div className={`flex space-x-4 p-2 ${color} }`}>
            <img className='w-14' src={icon} alt="medalla" />
          <div className='flex flex-col ml-2'>
             <span className="text-xs md:text-lg font-semibold">{name}</span>

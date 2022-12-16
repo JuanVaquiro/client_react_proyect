@@ -126,6 +126,12 @@ button:focus-visible {
   margin-left: 1214px;
 }
 /* FIN - ContaierBox PDF  */
+
+/* podio  */
+.banner-premiar{
+  width: 73%
+}
+
 .captu-camara{
   position: fixed;
   width: 60px;
@@ -136,6 +142,18 @@ button:focus-visible {
   z-index: 100;
 }
 
+.slate{
+  background-color: #e2e8f0
+}
+
+.yellow{
+  background-color: #fef08a;
+}
+
+ .orange{
+  background-color: #fed7aa
+}
+ 
 .captu-camara :hover{
   background-color: rgba(239, 239, 239, 0.874);
   border-radius: 10px;
@@ -144,10 +162,7 @@ button:focus-visible {
 #btn-cerrar-modal{
   background-color: #bb2d3b !important;
 }
-
-.modal-content-size{
-  width: 130% !important;
-}
+/* fin podio  */
 
 @media (max-width:720px){
   .responsi-card{
