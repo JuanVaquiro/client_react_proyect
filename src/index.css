@@ -142,6 +142,10 @@ button:focus-visible {
   z-index: 100;
 }
 
+.cart-medall{
+  padding: 14px;
+}
+
 .slate{
   background-color: #e2e8f0
 }
@@ -150,10 +154,22 @@ button:focus-visible {
   background-color: #fef08a;
 }
 
- .orange{
+.orange{
   background-color: #fed7aa
 }
- 
+
+#text-slate{
+  color: #64748b;
+}
+
+#text-yellow{
+  color: #ca8a04;
+}
+
+#text-orange{
+  color: #9a3412;
+}
+
 .captu-camara :hover{
   background-color: rgba(239, 239, 239, 0.874);
   border-radius: 10px;

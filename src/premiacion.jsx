@@ -72,8 +72,11 @@ function Premiacion() {
         <Fragment>
           <div id="PremiacionIMG" className="flex flex-col items-center justify-center p-6">
             <MainTitle />
+            <span className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
+              {Genero()}
+              </span>
             <h1 className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
-              {piramide} {Genero()}
+              {piramide} 
             </h1>
             {premiacion.map((params) => (
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
@@ -85,6 +88,7 @@ function Premiacion() {
                       name={params.Oro}
                       delation={params.delacion_oro}
                       color={'yellow'}
+                      colorText={'text-yellow'}
                       text={"ORO"}
                       icon={Gold}
                       copa={CopaGold}
@@ -96,6 +100,7 @@ function Premiacion() {
                       name={params.silver}
                       delation={params.delation_silver}
                       color={"slate"}
+                      colorText={'text-slate'}
                       text={"PLATA"}
                       icon={Silver}
                       copa={CopaSilver}
@@ -107,6 +112,7 @@ function Premiacion() {
                       name={params.bronze}
                       delation={params.delation_bronze}
                       color={'orange'}
+                      colorText={'text-orange'}
                       text={"BRONCE 1"}
                       icon={Bronze}
                       copa={CopaBronze}
@@ -118,6 +124,7 @@ function Premiacion() {
                       name={params.bronze2}
                       delation={params.delation_bronze2}
                       color={'orange'}
+                      colorText={'text-orange'}
                       text={"BRONCE 2"}
                       icon={Bronze}
                       copa={CopaBronze}
