@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import Podium from "./components/Podium";
 import useFecthcMedalls from './hooks/useFecthMedalls';
 import MainTitle from "./components/MainTitle";
-import Footer from "./components/Footer";
 import Spinner from "./components/Loanding";
 import Gold from './multimedia/medalGold.png'
 import Silver from './multimedia/medalSilver.png'
@@ -12,12 +11,13 @@ import CopaGold from './multimedia/copa-de-oro.png'
 import CopaSilver from './multimedia/copa-de-plata.png'
 import CopaBronze from './multimedia/copa-de-bronce.png'
 import Ganadores from './multimedia/ganadores.png'
+import ScreenShop from "./components/ScreenShop";
 
 function Premiacion() {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
     const { piramide } = useParams()
     const [loading, setLoading] = useState(true)
-
+   
     useEffect(() => {
         setTimeout(() => {  
           setLoading(false)
@@ -40,8 +40,9 @@ function Premiacion() {
       })
 
     const premiacion = getAllMedalls.filter((elem) => {
-        return elem = elem.PIRAMIDE === piramide
+      return elem = elem.PIRAMIDE === piramide
     })
+      console.log(premiacion);
 
     const Genero = () => {
       if( piramide.charAt(0) === 'F'){
@@ -58,7 +59,7 @@ function Premiacion() {
     else {
       return (
         <Fragment>
-          <div className="flex flex-col items-center justify-center p-6">
+          <div id="PremiacionIMG" className="flex flex-col items-center justify-center p-6">
             <MainTitle />
             <h1 className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
               {piramide} {Genero()}
@@ -67,39 +68,44 @@ function Premiacion() {
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
                 <img className="w-2/5" src={Ganadores} alt="" />
                 <div>
-                  {params.Oro != "ESPERANDO COMPETIDOR" && params.Oro != "BY" ? (
+                  {params.Oro !== "ESPERANDO COMPETIDOR" && 
+                  params.Oro !== "BY" ? (
                     <Podium
                       name={params.Oro}
+                      delation={params.delacion_oro}
                       color={'yellow'}
                       text={"ORO"}
                       icon={Gold}
                       copa={CopaGold}
                     />
                   ) : null}
-                  {params.silver != "ESPERANDO COMPETIDOR" &&
-                  params.silver != "BY" ? (
+                  {params.silver !== "ESPERANDO COMPETIDOR" &&
+                  params.silver !== "BY" ? (
                     <Podium
                       name={params.silver}
-                      color={'slate'}
+                      delation={params.delation_silver}
+                      color={"slate"}
                       text={"PLATA"}
                       icon={Silver}
                       copa={CopaSilver}
                     />
                   ) : null}
-                  {params.bronze != "ESPERANDO COMPETIDOR" &&
-                  params.bronze != "BY" ? (
+                  {params.bronze !== "ESPERANDO COMPETIDOR" &&
+                  params.bronze !== "BY" ? (
                     <Podium
                       name={params.bronze}
+                      delation={params.delation_bronze}
                       color={'orange'}
                       text={"BRONCE 1"}
                       icon={Bronze}
                       copa={CopaBronze}
                     />
                   ) : null}
-                  {params.bronze2 != "ESPERANDO COMPETIDOR" &&
-                  params.bronze2 != "BY" ? (
+                  {params.bronze2 !== "ESPERANDO COMPETIDOR" &&
+                  params.bronze2 !== "BY" ? (
                     <Podium
                       name={params.bronze2}
+                      delation={params.delation_bronze2}
                       color={'orange'}
                       text={"BRONCE 2"}
                       icon={Bronze}
@@ -109,8 +115,8 @@ function Premiacion() {
                 </div>
               </div>
             ))}
-            <Footer />
-          </div>
+            </div>
+            <ScreenShop />
         </Fragment>
     );
   }
