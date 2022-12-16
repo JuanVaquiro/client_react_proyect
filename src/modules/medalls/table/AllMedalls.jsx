@@ -48,8 +48,8 @@ const AllMedalls = () => {
   }
   else {
     return (
-      <div className='flex flex-col justify-center items-center responsi-container'>
-        <div className='flex gap-2 mt-3'>
+      <div className="flex flex-col justify-center items-center responsi-container">
+        <div className="flex gap-2 mt-3">
           <PDFDownloadLink
             document={<AllMedallsPDF medalls={getAllMedalls} />}
             fileName="Medalleria.pdf"
@@ -57,9 +57,7 @@ const AllMedalls = () => {
             <button className="btn btn-primary">Descargar PDF</button>
           </PDFDownloadLink>
           <a href={`${Constante.RUTA_API}/reporteMedalleria.php`}>
-              <button className='btn btn-success'>
-                Descargar Excel
-              </button>
+            <button className="btn btn-success">Descargar Excel</button>
           </a>
         </div>
         <input
@@ -71,7 +69,7 @@ const AllMedalls = () => {
         />
         <table id="TableXLSX" className="tabla">
           <thead>
-            <tr className=''>
+            <tr className="">
               <th>*</th>
               <th>#DP</th>
               <th>PIRAMIDE</th>
@@ -90,30 +88,40 @@ const AllMedalls = () => {
               <tr key={params.COD}>
                 <td>{params.COD}</td>
                 <td>{params.CANT_DEPORTISTAS}</td>
-                <td
-                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                > {params.PIRAMIDE}</td>
-                <td 
-                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                  className="bg-yellow-300">{params.Oro}</td>
+                <td>
+                  <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                    {params.PIRAMIDE}
+                  </a>
+                </td>
+                <td className="bg-yellow-300">
+                  <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                    {params.Oro}
+                  </a>
+                </td>
                 <td>{params.delacion_oro}</td>
-                <td 
-                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                  className="bg-slate-300">{params.silver}</td>
+                <td className="bg-slate-300">
+                  <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                    {params.silver}
+                  </a>
+                </td>
                 <td>{params.delation_silver}</td>
-                <td 
-                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                  className="bg-orange-300">{params.bronze}</td>
+                <td className="bg-orange-300">
+                  <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                    {params.bronze}
+                  </a>
+                </td>
                 <td>{params.delation_bronze}</td>
-                <td 
-                  onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                  className="bg-orange-300">{params.bronze2}</td>
+                <td className="bg-orange-300">
+                  <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                    {params.bronze2}
+                  </a>
+                </td>
                 <td>{params.delation_bronze2}</td>
               </tr>
             ))}
           </tbody>
-          </table>  
-        </div>
+        </table>
+      </div>
     );
   }
 };

@@ -92,20 +92,38 @@ const FilterGeneral = () => {
               <tbody>
                 {FilterDelegation.map((params) => (
                   <tr key={params.COD}>
-                    <td>{params.COD}</td>
-                    <td>{params.CANT_DEPORTISTAS}</td>
-                    <td
-                    onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)}
-                    >{params.PIRAMIDE}</td>
-                    <td onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)} className="bg-yellow-300">{params.Oro}</td>
-                    <td>{params.delacion_oro}</td>
-                    <td onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)} className="bg-slate-300">{params.silver}</td>
-                    <td>{params.delation_silver}</td>
-                    <td onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)} className="bg-orange-300">{params.bronze}</td>
-                    <td>{params.delation_bronze}</td>
-                    <td onClick={() => navigate(`/Premiacion/${params.PIRAMIDE}`)} className="bg-orange-300">{params.bronze2}</td>
-                    <td>{params.delation_bronze2}</td>
-                  </tr>
+                  <td>{params.COD}</td>
+                  <td>{params.CANT_DEPORTISTAS}</td>
+                  <td>
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.PIRAMIDE}
+                    </a>
+                  </td>
+                  <td className="bg-yellow-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.Oro}
+                    </a>
+                  </td>
+                  <td>{params.delacion_oro}</td>
+                  <td className="bg-slate-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.silver}
+                    </a>
+                  </td>
+                  <td>{params.delation_silver}</td>
+                  <td className="bg-orange-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.bronze}
+                    </a>
+                  </td>
+                  <td>{params.delation_bronze}</td>
+                  <td className="bg-orange-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.bronze2}
+                    </a>
+                  </td>
+                  <td>{params.delation_bronze2}</td>
+                </tr>
                 ))}
               </tbody>
             </table>

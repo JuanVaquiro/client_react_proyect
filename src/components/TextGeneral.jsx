@@ -17,7 +17,7 @@ const TextGeneral = () => {
     <Fragment>
     {
         text.map((params) => (
-            <div className="flex">
+            <div key={params.id} className="flex">
                 <span key={params.id} className="font-medium"> ☑  {params.texto} </span>
             </div>
         ))

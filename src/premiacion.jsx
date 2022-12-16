@@ -13,7 +13,7 @@ import CopaSilver from './multimedia/copa-de-plata.png'
 import CopaBronze from './multimedia/copa-de-bronce.png'
 import Ganadores from './multimedia/ganadores.png'
 import GanadoresFm from './multimedia/ganadoresFemenino.png'
-import Banner from './multimedia/encabezadoLargo.png'
+import Banner from './multimedia/piedepaginalargo.png'
 
 function Premiacion() {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
@@ -79,7 +79,7 @@ function Premiacion() {
             </h1>
             {premiacion.map((params) => (
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
-                <img className="w-2/5" src={GeneroImg()} alt="" />
+                <img className="w-0 md:w-2/5" src={GeneroImg()} alt="" />
                 <div>
                   {params.Oro !== "ESPERANDO COMPETIDOR" && 
                   params.Oro !== "BY" ? (
@@ -133,7 +133,7 @@ function Premiacion() {
               </div>
             ))}
             <div className="flex items-center justify-center m-3 p-2">
-                <img className="banner-premiar" src={Banner} alt="patrocinaores" />
+                <img className="w-full md:w-8/12" src={Banner} alt="patrocinaores" />
             </div>
             </div>
             <ScreenShop />
