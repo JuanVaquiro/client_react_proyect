@@ -1,5 +1,5 @@
 
-export const ENDPOINT_SERVET_URL = 'hhttps://piramides2.comunisoft.com'
+export const ENDPOINT_SERVET_URL = 'https://piramides2.comunisoft.com/'
 
 /* index 
 * Carts Items

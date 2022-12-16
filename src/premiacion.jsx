@@ -74,12 +74,12 @@ function Premiacion() {
             <span className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
               {Genero()}
               </span>
-            <h1 className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
+            <h1 className="mb-4 text-2xl text-center font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
               {piramide} 
             </h1>
             {premiacion.map((params) => (
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
-                <img className="w-0 md:w-2/5" src={GeneroImg()} alt="" />
+                {/*<img className="w-0 md:w-2/5" src={GeneroImg()} alt="" /> */}
                 <div>
                   {params.Oro !== "ESPERANDO COMPETIDOR" && 
                   params.Oro !== "BY" ? (
@@ -132,7 +132,7 @@ function Premiacion() {
                 </div>
               </div>
             ))}
-            <div className="flex items-center justify-center m-3 p-2">
+            <div className="flex items-center justify-center mt-3 md:m-3 md:p-2">
                 <img className="w-full md:w-8/12" src={Banner} alt="patrocinaores" />
             </div>
             </div>
