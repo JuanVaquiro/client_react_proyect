@@ -1,10 +1,20 @@
 import html2canvas from "html2canvas";
-import { Fragment, useRef, useState } from "react";
+import { Fragment, useRef, useState, useEffect } from "react";
 import iconScreen  from "../multimedia/screenshot.png"
+import Spinner from "./Loanding";
 
 const ScreenShop = () => {
   const [Image, setImage] = useState();
   const modalRef = useRef();
+  const [loading, setLoading] = useState(false)
+   
+  useEffect(() => {
+    setTimeout(() => {  
+      setLoading(true)
+    },1000)
+  },[]);
+
+  const loader = () =>  <Spinner />
 
   const openModal = () => {
     const element = document.querySelector("#PremiacionIMG");

@@ -18,7 +18,7 @@ const MainTitle = () => {
   
   return (
     <Fragment>
-      <h2 className="font-extrabold text-center text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text">
+      <h2 className="font-extrabold text-center text-2xl mb-2 p-1 md:text-4xl md:p-3 md:mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text">
         {textTitle}
       </h2>
     </Fragment>

@@ -13,7 +13,7 @@ import CopaSilver from './multimedia/copa-de-plata.png'
 import CopaBronze from './multimedia/copa-de-bronce.png'
 import Ganadores from './multimedia/ganadores.png'
 import GanadoresFm from './multimedia/ganadoresFemenino.png'
-import Banner from './multimedia/piedepaginalargo.png'
+import Banner from './multimedia/piedepaginalargo.jpeg'
 
 function Premiacion() {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
@@ -53,14 +53,14 @@ function Premiacion() {
      }
     }
 
-    const GeneroImg = () => {
+   /*  const GeneroImg = () => {
       if( piramide.charAt(0) === 'F'){
       return GanadoresFm
      } else if( piramide.charAt(0) === 'M') {
       return Ganadores
      }
     }
-
+ */
     const loader = () => { return ( <Spinner /> ) }
   
     if(loading){
@@ -71,15 +71,15 @@ function Premiacion() {
         <Fragment>
           <div id="PremiacionIMG" className="flex flex-col items-center justify-center p-6">
             <MainTitle />
-            <span className="mb-4 text-2xl font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
+            <span className="m-1 text-2xl font-extrabold text-blue-900 md:mb-4 md:text-3xl lg:text-4xl">
               {Genero()}
               </span>
-            <h1 className="mb-4 text-2xl text-center font-extrabold text-blue-900 md:text-3xl lg:text-4xl">
+            <h1 className="m-1 text-2xl text-center font-extrabold text-blue-900 md:mb-4 md:text-3xl lg:text-4xl">
               {piramide} 
             </h1>
             {premiacion.map((params) => (
               <div key={params.COD} className="flex flex-col justify-center items-center gap-2 md:flex-row">
-                {/*<img className="w-0 md:w-2/5" src={GeneroImg()} alt="" /> */}
+                {/* <img className="w-0 md:w-2/5" src={GeneroImg()} alt="" />  */ }
                 <div>
                   {params.Oro !== "ESPERANDO COMPETIDOR" && 
                   params.Oro !== "BY" ? (
@@ -133,7 +133,7 @@ function Premiacion() {
               </div>
             ))}
             <div className="flex items-center justify-center mt-3 md:m-3 md:p-2">
-                <img className="w-full md:w-8/12" src={Banner} alt="patrocinaores" />
+                <img className="w-full md:w-7/12" src={Banner} alt="patrocinadores" />
             </div>
             </div>
             <ScreenShop />
