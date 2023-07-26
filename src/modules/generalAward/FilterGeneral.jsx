@@ -1,6 +1,6 @@
-import { Fragment, useEffect, useState } from 'react'
-import { useParams } from "react-router-dom";
-import { PDFDownloadLink } from '@react-pdf/renderer'
+  import { Fragment, useEffect, useState } from 'react'
+import { useParams, useNavigate } from "react-router-dom";
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import useFecthcMedalls from '../../hooks/useFecthMedalls';
 import BtnBack from '../../components/BtnBack';
 import Spinner from '../../components/Loanding'
@@ -12,7 +12,8 @@ const FilterGeneral = () => {
     const { gold, silver, bronze, bronze2 } = useFecthcMedalls()
     const [loading, setLoading] = useState(true)
     const { delation } = useParams()
-  
+    const navigate = useNavigate();
+
     useEffect(() => {
       setTimeout(() => {  
         setLoading(false)
@@ -91,18 +92,38 @@ const FilterGeneral = () => {
               <tbody>
                 {FilterDelegation.map((params) => (
                   <tr key={params.COD}>
-                    <td>{params.COD}</td>
-                    <td>{params.CANT_DEPORTISTAS}</td>
-                    <td>{params.PIRAMIDE}</td>
-                    <td className="bg-yellow-300">{params.Oro}</td>
-                    <td>{params.delacion_oro}</td>
-                    <td className="bg-slate-300">{params.silver}</td>
-                    <td>{params.delation_silver}</td>
-                    <td className="bg-orange-300">{params.bronze}</td>
-                    <td>{params.delation_bronze}</td>
-                    <td className="bg-orange-300">{params.bronze2}</td>
-                    <td>{params.delation_bronze2}</td>
-                  </tr>
+                  <td>{params.COD}</td>
+                  <td>{params.CANT_DEPORTISTAS}</td>
+                  <td>
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.PIRAMIDE}
+                    </a>
+                  </td>
+                  <td className="bg-yellow-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.Oro}
+                    </a>
+                  </td>
+                  <td>{params.delacion_oro}</td>
+                  <td className="bg-slate-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.silver}
+                    </a>
+                  </td>
+                  <td>{params.delation_silver}</td>
+                  <td className="bg-orange-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.bronze}
+                    </a>
+                  </td>
+                  <td>{params.delation_bronze}</td>
+                  <td className="bg-orange-300">
+                    <a href={`/Premiacion/${params.PIRAMIDE}`} target="_blank">
+                      {params.bronze2}
+                    </a>
+                  </td>
+                  <td>{params.delation_bronze2}</td>
+                </tr>
                 ))}
               </tbody>
             </table>

@@ -5,6 +5,7 @@ import BtnBack from '../../components/BtnBack'
 import Constante from '../../constante'
 import GeneralAwardPDF from '../../renderPDF/GeneralAwardPDF'
 import MainTitle from '../../components/MainTitle';
+import TextGeneral from '../../components/TextGeneral';
 
 
 const GeneralAward = () => {
@@ -30,14 +31,7 @@ const GeneralAward = () => {
         </h2>
         <MainTitle />
         <div className="flex flex-col items-center p-3">
-          <span className="font-medium">
-            ☑ Para que la medalla sea puntuable, deben haber mínimo 3
-            deportistas de 3 delegaciones diferentes
-          </span>
-          <span className="font-medium">
-            ☑ La general se calcula por la mayor cantidad de medallas de oro,
-            plata y bronce en su respectivo orden.
-          </span>
+        <TextGeneral />
           <div className="flex gap-2 mt-3">
             <PDFDownloadLink
               document={<GeneralAwardPDF GeneralAward={general} />}
@@ -55,19 +49,19 @@ const GeneralAward = () => {
         <table id="TableXLSX" className="tabla text-center w-9/12 text-xl">
           <thead>
             <tr>
-              <th>#</th>
+              <th>PUESTO</th>
               <th>DELEGACION</th>
-              <th>TOTAL</th>
-              <th>PUNTOS MEDALLAS</th>
+            {/*   <th>TOTAL</th>
+  <th>PUNTOS MEDALLAS</th> */}
               <th>ORO</th>
               <th>PLATA</th>
               <th>BRONCE</th>
             </tr>
           </thead>
           <tbody className="cursor-pointer">
-            {general.map((data) => (
+            {general.map((data, index) => (
               <tr key={data.cod_del}>
-                <td>{data.cod_del}</td>
+                <td>{index + 1}</td>
                 <td
                   onClick={() =>
                     navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
@@ -75,13 +69,13 @@ const GeneralAward = () => {
                 >
                   {data.DELEGACION}
                 </td>
-                <td
+         {/*        <td
                   onClick={() =>
                     navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
                   }
                 >
                   {data.PUNTOS_GENERAL}
-                </td>
+                </td> 
                 <td
                   onClick={() =>
                     navigate(`/proyecto1/PremiacionGeneral/${data.DELEGACION}`)
@@ -89,6 +83,7 @@ const GeneralAward = () => {
                 >
                   {data.PUNTUACION_MEDALLAS}
                 </td>
+              */}
                 <td className="bg-yellow-300">{data.ORO}</td>
                 <td className="bg-slate-300">{data.PLATA}</td>
                 <td className="bg-orange-300">{data.BRONCE}</td>

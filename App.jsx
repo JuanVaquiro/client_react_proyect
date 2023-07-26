@@ -1,22 +1,20 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import BtnBack from './components/BtnBack'
-import Footer from './components/Footer'
-import Karate1 from './components/logos/Karate1'
-import Karate2 from './components/logos/Karate2'
-import MainTitle from './components/MainTitle'
-import Constante from './constante'
-import { NotCache } from './helpers/notCache'
-import { CART_ITEM_1 } from './env'
-import { CART_ITEM_2 } from './env'
-import { CART_ITEM_3 } from './env'
-import { CART_ITEM_4 } from './env'
-import { ANCOR_1 } from './env'
-import { ANCOR_2 } from './env'
-import { HAND_FIST } from './multimedia/SVG'
-import { SORT_AMOUNT_UP } from './multimedia/SVG'
-import { TROPHY } from './multimedia/SVG'
-import { MEDALL } from './multimedia/SVG'
+import Footer from './src/components/Footer'
+import Karate1 from './src/components/logos/Karate1'
+import Karate2 from './src/components/logos/Karate2'
+import MainTitle from './src/components/MainTitle'
+import Constante from './src/constante'
+import { CART_ITEM_1 } from './src/env'
+import { CART_ITEM_2 } from './src/env'
+import { CART_ITEM_3 } from './src/env'
+import { CART_ITEM_4 } from './src/env'
+import { ANCOR_1 } from './src/env'
+import { ANCOR_2 } from './src/env'
+import { HAND_FIST } from './src/multimedia/SVG'
+import { SORT_AMOUNT_UP } from './src/multimedia/SVG'
+import { TROPHY } from './src/multimedia/SVG'
+import { MEDALL } from './src/multimedia/SVG'
 
 
 function App() {
@@ -66,7 +64,6 @@ function App() {
         <div className='flex flex-col mt-3'>
           <a 
             id="CACHE-ANCOR1"
-            onClick={''} 
             href={`${Constante.RUTA_API}/pdfAnexo/anexo1.pdf`} 
             target="_blank" 
             className="pdfPoomsae m-2 text-sm underline underline-offset-4"
@@ -75,7 +72,6 @@ function App() {
           </a>
           <a  
            id='CACHE-ANCOR2' 
-           onClick={''}
            href={`${Constante.RUTA_API}/pdfAnexo/anexo2.pdf`} 
            target="_blank" 
            className="pdfPoomsae m-2 text-sm underline underline-offset-4"

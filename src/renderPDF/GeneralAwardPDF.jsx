@@ -142,17 +142,17 @@ const GeneralAwardPDF = ({ GeneralAward }) => {
         <View style={styles.tabla}>
           <View style={styles.tablaFila}>
             <View style={styles.tablaColumna2}>
-              <Text style={styles.tablaCeldaHeader}>#</Text>
+              <Text style={styles.tablaCeldaHeader}>PUESTO</Text>
             </View>
             <View style={styles.tablaColumna}>
               <Text style={styles.tablaCeldaHeader}>DELEGACION</Text>
             </View>
-            <View style={styles.tablaColumna1}>
+      {/*       <View style={styles.tablaColumna1}>
               <Text style={styles.tablaCeldaHeader}>TOTAL</Text>
             </View>
             <View style={styles.tablaColumna}>
               <Text style={styles.tablaCeldaHeader}>PUNTOS MEDALLAS</Text>
-            </View>
+  </View> */}
             <View style={styles.tablaColumna3}>
               <Text style={styles.tablaCeldaHeader}>ORO</Text>
             </View>
@@ -164,22 +164,22 @@ const GeneralAwardPDF = ({ GeneralAward }) => {
             </View>
           </View>
 
-          {GeneralAward.map((data) => (
+          {GeneralAward.map((data, index) => (
             <View style={styles.tablaFila} key={data.cod_del}>
               <View style={styles.anchoColumnaNumber}>
-                <Text style={styles.tablaCeldaContents}>{data.cod_del}</Text>
+                <Text style={styles.tablaCeldaContents}>{index + 1}</Text>
               </View>
               <View style={styles.anchoColumna}>
                 <Text style={styles.tablaCeldaContents}>{data.DELEGACION}</Text>
               </View>
-              <View style={styles.anchoColumna1}>
+              {/* <View style={styles.anchoColumna1}>
                 <Text style={styles.tablaCeldaContents}>{data.PUNTOS_GENERAL}</Text>
               </View>
               <View style={styles.anchoColumna}>
                 <Text style={styles.tablaCeldaContents}>
                   {data.PUNTUACION_MEDALLAS}
                 </Text>
-              </View>
+          </View> */}
               <View style={styles.anchoColumna3}>
                 <Text style={styles.tablaCeldaContents}>
                   {data.ORO}

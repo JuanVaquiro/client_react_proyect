@@ -39,6 +39,7 @@ button:focus-visible {
   margin: 10px;
   overflow-y: scroll;
   text-align: center;
+  cursor: pointer;
 }
 
 .tabla td,
@@ -125,6 +126,63 @@ button:focus-visible {
   margin-left: 1214px;
 }
 /* FIN - ContaierBox PDF  */
+
+/* podio  */
+.banner-premiar{
+  width: 73%
+}
+
+.captu-camara{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #a3c5f586;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 100;
+}
+
+.captu-camara :hover{
+  background-color: rgba(239, 239, 239, 0.646);
+  border-radius: 10px;
+}
+
+.cart-medall{
+  padding: 14px;
+}
+
+.slate{
+  background-color: #e2e8f0
+}
+
+.yellow{
+  background-color: #fef08a;
+}
+
+.orange{
+  background-color: #fed7aa
+}
+
+#text-slate{
+  color: #64748b;
+}
+
+#text-yellow{
+  color: #ca8a04;
+}
+
+#text-orange{
+  color: #9a3412;
+}
+
+#btn-cerrar-modal{
+  background-color: #bb2d3b !important;
+}
+
+#btn-descargar-modal{
+  background-color: #146c43;
+}
+/* fin podio  */
 
 @media (max-width:720px){
   .responsi-card{
