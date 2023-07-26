@@ -8,11 +8,11 @@ import BtnBack from '../../components/BtnBack';
 import MainTitle from '../../components/MainTitle'
 
 const Medalls = () => {
-  const [verOro, setVerOro] = useState(true)
+  const [verOro, setVerOro] = useState(false)
   const [verPlata, setVerPlata] = useState(false)
   const [verBronce1, setVerBronce1] = useState(false)
   const [verBronce2, setVerBronce2] = useState(false)
-  const [verTodas, setVerTodas] = useState(false)
+  const [verTodas, setVerTodas] = useState(true)
   
   const MostrarOro = () => { 
     setVerOro(true)
@@ -99,11 +99,11 @@ const Medalls = () => {
       </div>
       </div>
 
+      {verTodas ? <AllMedalls /> : null}
       {verOro ? <TableGold /> : null}
       {verPlata ? <TableSilver /> : null}
       {verBronce1 ? <TableBronze /> : null}
       {verBronce2 ? <TableBronze2 /> : null}
-      {verTodas ? <AllMedalls /> : null}
     </Fragment>
   );
 }

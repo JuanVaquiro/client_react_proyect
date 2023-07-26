@@ -1,26 +1,25 @@
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import Footer from './components/Footer'
-import Karate1 from './components/logos/Karate1'
-import Karate2 from './components/logos/Karate2'
-import MainTitle from './components/MainTitle'
-import Constante from './constante'
-import { CART_ITEM_1 } from './env'
-import { CART_ITEM_2 } from './env'
-import { CART_ITEM_3 } from './env'
-import { CART_ITEM_4 } from './env'
-import { ANCOR_1 } from './env'
-import { ANCOR_2 } from './env'
-import { HAND_FIST } from './multimedia/SVG'
-import { SORT_AMOUNT_UP } from './multimedia/SVG'
-import { TROPHY } from './multimedia/SVG'
-import { MEDALL } from './multimedia/SVG'
-import { ARROW_LEFT } from './multimedia/SVG'
+import Footer from './src/components/Footer'
+import Karate1 from './src/components/logos/Karate1'
+import Karate2 from './src/components/logos/Karate2'
+import MainTitle from './src/components/MainTitle'
+import Constante from './src/constante'
+import { CART_ITEM_1 } from './src/env'
+import { CART_ITEM_2 } from './src/env'
+import { CART_ITEM_3 } from './src/env'
+import { CART_ITEM_4 } from './src/env'
+import { ANCOR_1 } from './src/env'
+import { ANCOR_2 } from './src/env'
+import { HAND_FIST } from './src/multimedia/SVG'
+import { SORT_AMOUNT_UP } from './src/multimedia/SVG'
+import { TROPHY } from './src/multimedia/SVG'
+import { MEDALL } from './src/multimedia/SVG'
+
 
 function App() {
   return (
     <Fragment>
-      <a href="https://yo.comunisoft.com/">{ARROW_LEFT}</a>
       <main className="flex flex-col justify-center items-center  mb-6 ">
         <MainTitle className="font-extrabold text-center text-4xl p-3 mb-4 lg:text-4xl md:pt-9 lg:mb-5 bg-clip-text" />
         <div className="flex space-x-8 responsi-card">

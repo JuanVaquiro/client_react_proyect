@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+  import { Fragment, useEffect, useState } from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import useFecthcMedalls from '../../hooks/useFecthMedalls';

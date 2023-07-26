@@ -49,19 +49,19 @@ const GeneralAward = () => {
         <table id="TableXLSX" className="tabla text-center w-9/12 text-xl">
           <thead>
             <tr>
-              <th>#</th>
+              <th>PUESTO</th>
               <th>DELEGACION</th>
-              <th>TOTAL</th>
-              <th>PUNTOS MEDALLAS</th>
+            {/*   <th>TOTAL</th>
+  <th>PUNTOS MEDALLAS</th> */}
               <th>ORO</th>
               <th>PLATA</th>
               <th>BRONCE</th>
             </tr>
           </thead>
           <tbody className="cursor-pointer">
-            {general.map((data) => (
+            {general.map((data, index) => (
               <tr key={data.cod_del}>
-                <td>{data.cod_del}</td>
+                <td>{index + 1}</td>
                 <td
                   onClick={() =>
                     navigate(`/PremiacionGeneral/${data.DELEGACION}`)
@@ -69,13 +69,13 @@ const GeneralAward = () => {
                 >
                   {data.DELEGACION}
                 </td>
-                <td
+         {/*        <td
                   onClick={() =>
                     navigate(`/PremiacionGeneral/${data.DELEGACION}`)
                   }
                 >
                   {data.PUNTOS_GENERAL}
-                </td>
+                </td> 
                 <td
                   onClick={() =>
                     navigate(`/PremiacionGeneral/${data.DELEGACION}`)
@@ -83,6 +83,7 @@ const GeneralAward = () => {
                 >
                   {data.PUNTUACION_MEDALLAS}
                 </td>
+              */}
                 <td className="bg-yellow-300">{data.ORO}</td>
                 <td className="bg-slate-300">{data.PLATA}</td>
                 <td className="bg-orange-300">{data.BRONCE}</td>
