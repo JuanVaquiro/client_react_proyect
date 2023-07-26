@@ -1,14 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from './App'
-import Medalls from './modules/medalls/Medalls';
-import NextFights from './modules/upcomingFights/NextFights';
-import GeneralAward from './modules/generalAward/GeneralAward';
-import FilterGeneral from './modules/generalAward/FilterGeneral';
-import Portal from './portal';
-import Premiacion from './premiacion';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import App from '../App'
+import Medalls from './modules/medalls/Medalls'
+import NextFights from './modules/upcomingFights/NextFights'
+import GeneralAward from './modules/generalAward/GeneralAward'
+import FilterGeneral from './modules/generalAward/FilterGeneral'
+import Premiacion from './premiacion'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
